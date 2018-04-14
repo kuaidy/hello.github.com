@@ -3,7 +3,6 @@ description: 总有你不知道的
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-modernist
-paginate: 20
 
 gems:
   - jekyll-mentions
