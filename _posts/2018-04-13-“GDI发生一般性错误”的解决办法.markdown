@@ -48,5 +48,5 @@ if (openFileDialog1.ShowDialog() == DialogResult.OK)  
   draw.Dispose();  
   bmp.Dispose();//释放bmp文件资源  
 }
-{% endlight %}
+{% endhighlight %}
 ```
