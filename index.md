@@ -2,7 +2,7 @@
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
+      {{ post.excerpt | strip_html }}
     </li>
   {% endfor %}
 </ul>
