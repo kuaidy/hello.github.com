@@ -2,6 +2,7 @@ title: rdonly
 description: 总有你不知道的
 show_downloads: true
 theme: jekyll-theme-modernist
+excerpt_separator：<!--more-->
 
 gems:
   - jekyll-mentions
