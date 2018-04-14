@@ -1,5 +1,4 @@
 ---
-layout: null
 date: 2018-4-13 22:11:00
 author: kuai
 ---
