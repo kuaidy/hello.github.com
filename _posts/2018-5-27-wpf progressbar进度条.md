@@ -1,10 +1,10 @@
-##C# 自定义控件样式
+## C# 自定义控件样式
 
 进度条常用在加载，下载，导出一些比较耗时的地方，利用进度条能让用户看到实时进展，能有更好的用户体验……
 
 <!--more-->
 
-#####直接开始
+##### 直接开始
 新建一个wpf项目，然后在主窗口添加一个按钮，用来控制进度的开始。加一个进度条控件progressbar。双击按钮，为按钮添加事件，代码直接循环模仿进度的进行……
 
 ```C#
@@ -23,7 +23,7 @@ private void button4_Click(object sender, RoutedEventArgs e)
 ![image.png](https://upload-images.jianshu.io/upload_images/3956112-17012b257ccc9885.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#####多线程开始
+##### 多线程开始
 我们重新开启一个线程来模仿进度条进度，在按钮的点击事件下进行调用。好了，这次在点击按钮，我们可以看到进度条正常的显示进度情况了，不错，不错，是这种效果。
 ```C#
 private void ProgressBegin() 
@@ -41,7 +41,7 @@ private void ProgressBegin()
     thread.Start();
 }
 ```
-#####新窗口来一个
+##### 新窗口来一个
 这个写法是一样的，只不过在新窗口弄一个，用弹窗的方式来显示，有时候还是会用到的。新建一个wpf窗口，同样加入一个进度条控件，在主窗口的按钮点击事件中写入新窗口的创建和显示，在新窗口的构造函数中调用，进度条开始进度的方法。
 ```C#
 //window1.xaml
@@ -106,7 +106,7 @@ namespace progressbartest
 ```
 ![image.png](https://upload-images.jianshu.io/upload_images/3956112-0fc7165ba589ded0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#####BackgroundWork方式
+##### BackgroundWork方式
 BackgroundWorker类允许您在单独的线程上执行某个可能导致用户界面（UI）停止响应的耗时操作（比如文件下载数据库事务等），并且想要一个响应式的UI来反应当前耗时操作的进度。 那岂不是用来做进度条再合适不过了，可以利用单独线程来执行耗时操作，还能反应操作的进度。
 
 当然，如果你要使用它提供的方法，必须要先设置一下它的某些属性，不然就没法使用，比如：要使用*ReportProgress()*（报告进度）的方法，先要设置*WorkerReportsProgress=true*。其他的设置，可以查官方文档哦。
@@ -148,7 +148,7 @@ private void BgworkChange(object sender, ProgressChangedEventArgs e)
 ```
 ![image.png](https://upload-images.jianshu.io/upload_images/3956112-ec439664b9038ca9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#####源代码
+##### 源代码
 ```
 //mainwindow.xaml
 <Window x:Class="progressbartest.MainWindow"
@@ -328,5 +328,5 @@ namespace progressbartest
     }
 }
 ```
-#####参考资料
+##### 参考资料
 >[BackgroundWorker使用总结](https://blog.csdn.net/coderookieguo/article/details/72723310)
