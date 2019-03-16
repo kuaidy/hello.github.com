@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="优秀网站，有趣网站，创意网站，网址导航，上网主页，网站分享">
+    <meta name="description" content="优秀网站，在线音乐，免费视频，设计，游戏，学习，阅读，资源搜索，导航">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base target="_blank">
+	<title>寻。--找一些有趣的东西</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?03f8ad279ffe2551a5248a523213cac4";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<meta name="baidu_union_verify" content="eca8b06640ca20341ee578ec86d7e7f3">
+	<meta name="baidu-site-verification" content="wx66rdv1hJ" />
+</head>
+<body>
+	<div id="main">
+		<div id="header" class="outbox"><!--header-->
+			<div class="navinner">
+				<span id="span2"><a href="http://www.rdonly.com/">寻</a></span>
+				<span id="span3">
+					<ul id="nav">
+						<li><i>new</i><a href="./tooldown.html">软件下载</a></li>
+						<li><a target="_blank" href="https://shimo.im/docs/tAx0zmGUMLwPTdsq/ 「留言&闲聊」">留言</a></li>
+						<li id="moreinfo">
+							<a href="./included.html" title="随意分享一些东西">更多</a>
+							<!-- <ul id="moreinfo_tags">
+								<li class="moreinfo_tag"><a href="http://blog.rdonly.com/">博客</a></li>
+							</ul> -->
+						</li>
+						<li><a href="./update.html">关于</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
+
+		<div id="searchid">
+		    
+	    	<div id="sform" class="form-inline" role="form">
+	    	        <input name="sears" id="search" type="text" placeholder="寻你所寻" autocomplete="off" class="form-control input-lg">
+	    	        <button id="searchengine" value="百度" onclick="FindData();">百度</button>
+	    	</div>
+		   
+		    <div id="searchengineitems">
+		        <input type="submit" value="百度" id="baidu" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="谷歌" id="google" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="搜狗" id="sougou" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    	<input type="submit" value="必应" id="biying" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    	<input type="submit" value="谷歌学术" id="google1" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="微信" id="weixin" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="京东" id="jd" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="淘宝" id="taobao" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="知乎" id="zhihu" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="微博" id="weibo" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="豆瓣" id="douban" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="网盘" id="pangci" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    </div>
+		</div>
+
+
+		<!--<div id="hongbao" style="position: fixed;right: 10px;bottom:10px;display: flex;flex-direction:column;cursor: pointer;" onclick="close()">-->
+		<!--	<div id="closehongbao" style="width:100%;text-align:center;">点我隐藏</div>-->
+		<!--	<img id="hongbaoimage" style="width: 150px;height:226px " src="http://appfuns.oss-cn-hongkong.aliyuncs.com/hongbao.jpg" alt="">-->
+		<!--</div>-->
+<!-- 		<div class="inner">
+			<div id="tooldownload"><a id="toollink" href="">软件下载</a></div>
+			<div id="resourcedownload"><a id="resourcelink" href="">资源下载</a></div>
+			<div style="clear: both;"></div>
+		</div> -->
+<!-- 		<div class="ChangePanel inner">
+			<span class="FunctionItem" id="FunctionLead">导航</span>
+			<span class="FunctionItem" id="FunctionShortcuts">快捷键</span>
+		</div> -->
+
+		<div id="content" class="inner"><!--content-->
+			<div class="tags">
+				<span class="titlesign"></span>		
+				<h3>近期热门</h3>
+			</div>
+			<div class="sitediv" id="RecommandView">
+				<a id="RecommandUrl" href="https://movie.douban.com/annual/2018#0"><h3 style="color: #fff;font-size: 25px;"></h3></a>				
+				<!-- <a id="RecommandUrl" href="http://www.todayfl.com"><h3 style="color: #fff;font-size: 25px;"></h3></a> -->
+			</div>
+		</div> 
+		
+		<!--排行榜-->
+	    <div class="inner"><!--content-->
+			<div class="tags">
+				<span class="titlesign"></span>		
+				<h3>排行榜</h3>
+			</div>
+			<div class="sitechart">
+				<div id="chartmovies">
+			        <a href="https://movie.douban.com/chart" class="chartsurl"><h2>电影榜</h2></a>
+		        </div>
+		        <div id="center">
+			        <div id="chartmusic">
+				        <a href="http://music.163.com/#/discover/toplist?id=3778678" class="chartsurl"><h2>音乐榜</h2></a>
+			        </div>
+			        <div id="chartgame">
+				        <a href="http://top.17173.com/" class="chartsurl"><h2>游戏榜</h2></a>
+			        </div>
+		        </div>
+		        <div id="chartbook">
+			        <a href="https://book.douban.com/annual/2017?source=navigation" class="chartsurl"><h2>读书榜</h2></a>
+		        </div>
+			</div>
+		</div>
+		<!-- 其他功能 -->
+		<div class="ChangePanel inner">
+			<span class="FunctionItem" id="FunctionShortcuts"><a href="./shortcuts.html" class="FunctionItemUrl">快捷键</a></span>
+			<span class="FunctionItem"><a href="laboratory/bgimage/baimage.html" class="FunctionItemUrl">实验室</a></span>
+		</div>
+
+		<div id="adddiv"></div>
+
+	    <div id="footer" class="outbox">
+		    <center>
+		        <p>
+                    Hosted by <a href="https://pages.coding.me">Coding Pages</a>|
+                    感谢<a href="https://coding.net/r/IB6O6X"><strong>Coding</strong></a>提供服务支持|
+	                <a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=wkwcdo5j"><strong>阿里云</strong></a>提供图片存储
+				</p>
+		    </center>
+		</div><!--footer-->	
+
+	</div>
+</body>
+<script type="text/javascript" src="js/function.js"></script>
+<script>
+	getdata("read","阅读");
+	getdata("community","社区");
+	getdata("music","听歌");
+	getdata("musicarticle","文艺");
+	getdata("video","视频");
+	getdata("show","直播");
+	getdata("caption","字幕");
+	getdata("resource","资源");
+	getdata("carton","动漫");
+	getdata("design","设计");
+	getdata("ppt","PPT");
+	getdata("blog","博客");
+	getdata("tool","工具");
+	getdata("webmaster","站长工具");
+	getdata("study","学习");
+	getdata("question","问答");
+	getdata("network","网络安全");
+	getdata("app","应用");
+	getdata("write","自媒体");
+	getdata("work","工作");
+	getdata("lead","导航");
+</script>
+
+<script>//search
+function displayDate(id){
+	var searchengine=document.getElementById('searchengine');
+	searchengine.innerHTML=id.value;
+	searchengine.value=id.value;
+}
+
+function FindData(){
+	var search=document.getElementById('search');
+	var searchengine=document.getElementById('searchengine');
+	var query=search.value;
+	if(searchengine.value=="百度"){
+		window.open("https://www.baidu.com/s?wd="+query);
+	}else if(searchengine.value=="谷歌"){
+		window.open("http://www.google.com/search?q="+query);
+	}else if(searchengine.value=="搜狗"){
+		window.open("https://www.sogou.com/web?query="+query);
+	}else if(searchengine.value=="必应"){
+		window.open("http://cn.bing.com/search?q="+query);
+	}else if(searchengine.value=="谷歌学术"){
+		window.open("https://xue.glgoo.com/scholar?&q="+query);
+	}else if(searchengine.value=="微信"){
+		window.open("http://weixin.sogou.com/weixin?query="+query);
+	}else if(searchengine.value=="京东"){
+		window.open("http://search.jd.com/Search?enc=utf-8&keyword="+query);
+	}else if(searchengine.value=="淘宝"){
+		window.open("https://s.taobao.com/search?q="+query);
+	}else if(searchengine.value=="知乎"){
+		window.open("https://www.zhihu.com/search?q="+query);
+	}else if(searchengine.value=="微博"){
+		window.open("http://s.weibo.com/weibo/"+query);
+	}else if(searchengine.value=="豆瓣"){
+		window.open("https://www.douban.com/search?q="+query);
+	}else{
+		window.open("http://218.50.4.4/s/"+query);
+	}  
+}
+   
+document.onkeyup = function (e) {  
+    if (window.event)//如果window.event对象存在，就以此事件对象为准  
+        e = window.event;  
+    var code = e.charCode || e.keyCode;  
+    if (code == 13) {  
+        FindData();
+    }  
+} 	
+</script>
+
+<!-- <script>
+	$("#closehongbao").click(function(){
+  		$("#hongbao").slideUp("slow");
+	});
+	$("#hongbaoimage").click(function(){
+  		$("#hongbao").animate({
+  			width:"300px",
+  			height:"460px"
+  		});
+  		$("#hongbaoimage").animate({
+  			width:"300px",
+  			height:"450px"
+  		});
+	});
+	
+</script> -->
+<!-- <script>
+	SetIconBgColor()
+</script> -->
+<script>
+	$(document).ready(function(){
+		$("#adddiv").load("addsite.html");
+	});
+</script>
+</html>

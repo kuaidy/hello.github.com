@@ -1,0 +1,33 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"哔哩哔哩直播",
+			"siteurl":"http://live.bilibili.com/"
+		},
+		{
+			"name":"斗鱼",
+			"siteurl":"https://www.douyu.com/"
+		},
+		{
+			"name":"熊猫",
+			"siteurl":"http://www.panda.tv/"
+		},
+		{
+			"name":"战旗",
+			"siteurl":"https://www.zhanqi.tv/"
+		},
+		{
+			"name":"虎牙",
+			"siteurl":"http://www.huya.com/"
+		},
+		{
+			"name":"龙珠",
+			"siteurl":"http://www.longzhu.com/"
+		},
+		{
+			"name":"全民直播",
+			"siteurl":"http://www.quanmin.tv/"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"OfficePLUS",
+			"siteurl":"http://www.officeplus.cn/List.shtml?cat=PPT"
+		},
+		{
+			"name":"第一PPT",
+			"siteurl":"http://www.1ppt.com/"
+		},
+		{
+			"name":"hipper",
+			"siteurl":"http://www.hippter.com/"
+		},
+		{
+			"name":"稻壳儿",
+			"siteurl":"http://list.docer.com/"
+		},
+		{
+			"name":"声享",
+			"siteurl":"https://ppt.baomitu.com/"
+		}
+	]
+}

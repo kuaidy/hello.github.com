@@ -1,0 +1,30 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"DNF",
+			"siteurl":"http://dnf.qq.com/main.shtml"
+		},
+		{
+			"name":"LOL",
+			"siteurl":"http://lol.qq.com/"
+		},
+		{
+			"name":"守望先锋",
+			"siteurl":"http://ow.blizzard.cn/home"
+		},
+		{
+			"name":"FLASH游戏",
+			"siteurl":"http://www.friv.com/"
+		},
+		{
+			"name":"taptap",
+			"siteurl":"https://www.taptap.com/"
+		},
+		{
+			"name":"5173",
+			"siteurl":"http://www.5173.com/?recommenduserid=US14081065455191-03BF"
+		}  
+		
+	]
+}

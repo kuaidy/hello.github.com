@@ -1,0 +1,33 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"百家号",
+			"siteurl":"http://baijiahao.baidu.com/"
+		},
+		{
+			"name":"微信号",
+			"siteurl":"https://mp.weixin.qq.com/"
+		},
+		{
+			"name":"企鹅号",
+			"siteurl":"https://om.qq.com/userAuth/index"
+		},
+		{
+			"name":"大鱼号",
+			"siteurl":"https://mp.dayu.com/dashboard/index"
+		},
+		{
+			"name":"网易号",
+			"siteurl":"http://mp.163.com/index.html#/"
+		},
+		{
+			"name":"头条号",
+			"siteurl":"https://mp.toutiao.com/"
+		},
+		{
+			"name":"搜狗号",
+			"siteurl":"http://mp.sogou.com/"
+		}
+	]
+}

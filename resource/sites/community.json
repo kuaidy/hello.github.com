@@ -1,0 +1,35 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"Github",
+			"siteurl":"https://github.com/",
+			"status":"hot"
+		},
+		{
+			"name":"豆瓣",
+			"siteurl":"https://www.douban.com/"
+		},
+		{
+			"name":"v2ex",
+			"siteurl":"https://www.v2ex.com/"
+		},
+		{
+			"name":"吾爱破解",
+			"siteurl":"https://www.52pojie.cn/",
+			"status":"hot"
+		},
+		{
+			"name":"CSDN",
+			"siteurl":"https://www.csdn.net/"
+		},
+		{
+			"name":"掘金",
+			"siteurl":"https://juejin.im/"
+		},
+		{
+			"name":"小木虫",
+			"siteurl":"http://muchong.com/"
+		}
+	]
+}

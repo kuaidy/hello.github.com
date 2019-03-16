@@ -1,0 +1,30 @@
+{
+	"date":"2019-03-09",
+	"site":[
+		{
+			"name":"Staggeringbeauty",
+			"siteurl":"http://www.staggeringbeauty.com/",
+			"siteicon":"http://guozhivip.com/nav/images/ss.png",
+			"sitedesc":"一个贱萌的减压家伙"
+			
+		},
+		{
+			"name":"Neave",
+			"siteurl":"https://neave.com/",
+			"siteicon":"http://guozhivip.com/nav/images/get.png",
+			"sitedesc":"好玩的小游戏合集"
+		},
+		{
+			"name":"每日福利",
+			"siteurl":"https://meirifuli.org/",
+			"siteicon":"https://meirifuli.org/wp-content/uploads/2016/06/logo.svg",
+			"sitedesc":"每天都有新福利"
+		},
+		{
+			"name":"有趣的",
+			"siteurl":"https://youqu.de/",
+			"siteicon":"https://youqu.de/img/icon.png",
+			"sitedesc":"一个简单、温暖的小社区"
+		}
+	]
+}

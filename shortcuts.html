@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="优秀网站，有趣网站，创意网站，网址导航，上网主页，网站分享">
+    <meta name="description" content="优秀网站，在线音乐，免费视频，设计，游戏，学习，阅读，资源搜索，导航">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base target="_blank">
+	<title>寻。--找一些有趣的东西</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/shortcuts.css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?03f8ad279ffe2551a5248a523213cac4";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<meta name="baidu_union_verify" content="eca8b06640ca20341ee578ec86d7e7f3">
+	<meta name="baidu-site-verification" content="wx66rdv1hJ" />
+</head>
+<body>
+	<div id="main">
+		<div id="header" class="outbox"><!--header-->
+			<div class="navinner">
+				<span id="span2"><a href="http://www.rdonly.com/">寻</a></span>
+				<span id="span3">
+					<ul id="nav">
+						<li><i>new</i><a href="./tooldown.html">软件下载</a></li>
+						<li><a target="_blank" href="https://shimo.im/docs/tAx0zmGUMLwPTdsq/ 「留言&闲聊」">留言</a></li>
+						<li id="moreinfo">
+							<a href="./included.html" title="随意分享一些东西">更多</a>
+							<!-- <ul id="moreinfo_tags">
+								<li class="moreinfo_tag"><a href="http://blog.rdonly.com/">博客</a></li>
+							</ul> -->
+						</li>
+						<li><a href="./update.html">关于</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
+
+		<div id="searchid">
+		    
+	    	<div id="sform" class="form-inline" role="form">
+	    	        <input name="sears" id="search" type="text" placeholder="寻你所寻" autocomplete="off" class="form-control input-lg">
+	    	        <button id="searchengine" value="百度" onclick="FindData();">百度</button>
+	    	</div>
+		   
+		    <div id="searchengineitems">
+		        <input type="submit" value="百度" id="baidu" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="谷歌" id="google" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="搜狗" id="sougou" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    	<input type="submit" value="必应" id="biying" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    	<input type="submit" value="谷歌学术" id="google1" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="微信" id="weixin" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="京东" id="jd" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="淘宝" id="taobao" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="知乎" id="zhihu" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="微博" id="weibo" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="豆瓣" id="douban" button="" class="btn btn-primary" onclick="displayDate(this)">
+		        <input type="submit" value="网盘" id="pangci" button="" class="btn btn-primary" onclick="displayDate(this)">
+		    </div>
+		</div>
+
+
+		<!--<div id="hongbao" style="position: fixed;right: 10px;bottom:10px;display: flex;flex-direction:column;cursor: pointer;" onclick="close()">-->
+		<!--	<div id="closehongbao" style="width:100%;text-align:center;">点我隐藏</div>-->
+		<!--	<img id="hongbaoimage" style="width: 150px;height:226px " src="http://appfuns.oss-cn-hongkong.aliyuncs.com/hongbao.jpg" alt="">-->
+		<!--</div>-->
+<!-- 		<div class="inner">
+			<div id="tooldownload"><a id="toollink" href="">软件下载</a></div>
+			<div id="resourcedownload"><a id="resourcelink" href="">资源下载</a></div>
+			<div style="clear: both;"></div>
+		</div> -->
+<!-- 		<div class="ChangePanel inner">
+			<span class="FunctionItem" id="FunctionLead">导航</span>
+			<span class="FunctionItem" id="FunctionShortcuts">快捷键</span>
+		</div> -->
+
+		<div id="content" class="shortcutinner"><!--content-->
+			<div id="keyboard"> 
+				<ul class="keyboarditems">
+				    <li data-key="49">
+						<span>1</span>
+						<!-- <img data-key="49" src="http://www.bing.com/favicon.ico"> -->
+					</li> 
+				    <li data-key="50">
+						<span>2</span>
+						<!-- <img data-key="49" src="http://www.bing.com/favicon.ico"> -->
+					</li>
+				    <li data-key="51">
+						<span>3</span>
+						<!-- <img data-key="49" src="http://www.bing.com/favicon.ico"> -->
+					</li>
+				    <li data-key="52"><span>4</span></li>
+				    <li data-key="53"><span>5</span></li>
+				    <li data-key="54"><span>6</span></li>
+				    <li data-key="55"><span>7</span></li>
+				    <li data-key="56"><span>8</span></li>
+				    <li data-key="57"><span>9</span></li>
+				    <li data-key="48"><span>0</span></li>
+   				</ul>
+			   <ul class="keyboarditems">
+				    <li data-key="81"><span>Q</span></li>
+				    <li data-key="87"><span>W</span></li>
+				    <li data-key="69"><span>E</span></li>
+				    <li data-key="82"><span>R</span></li>
+				    <li data-key="84"><span>T</span></li>
+				    <li data-key="89"><span>Y</span></li>
+				    <li data-key="85"><span>U</span></li>
+				    <li data-key="73"><span>I</span></li>
+				    <li data-key="79"><span>O</span></li>
+				    <li data-key="80"><span>P</span></li>
+			   </ul>
+			   <ul class="keyboarditems">
+				    <li data-key="65"><span>A</span></li>
+				    <li data-key="83"><span>S</span></li>
+				    <li data-key="68"><span>D</span></li>
+				    <li data-key="70"><span>F</span></li>
+				    <li data-key="71"><span>G</span></li>
+				    <li data-key="72"><span>H</span></li>
+				    <li data-key="74"><span>J</span></li>
+				    <li data-key="75"><span>K</span></li>
+				    <li data-key="76"><span>L</span></li>
+			   </ul>
+			   <ul class="keyboarditems">
+				    <li data-key="90"><span>Z</span></li>
+				    <li data-key="88"><span>X</span></li>
+				    <li data-key="67"><span>C</span></li>
+				    <li data-key="86"><span>V</span></li>
+				    <li data-key="66"><span>B</span></li>
+				    <li data-key="78"><span>N</span></li>
+				    <li data-key="77"><span>M</span></li>
+			   </ul>
+  			</div>
+		</div> 
+
+		<div id="adddiv"></div>
+
+	    <div id="footer" class="outbox">
+		    <center>
+		        <p>
+                    Hosted by <a href="https://pages.coding.me">Coding Pages</a>|
+                    感谢<a href="https://coding.net/r/IB6O6X"><strong>Coding</strong></a>提供服务支持|
+	                <a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=wkwcdo5j"><strong>阿里云</strong></a>提供图片存储
+				</p>
+		    </center>
+		</div><!--footer-->	
+
+	</div>
+</body>
+<script type="text/javascript" src="js/function.js"></script>
+<script>//search
+function displayDate(id){
+	var searchengine=document.getElementById('searchengine');
+	searchengine.innerHTML=id.value;
+	searchengine.value=id.value;
+}
+
+function FindData(){
+	var search=document.getElementById('search');
+	var searchengine=document.getElementById('searchengine');
+	var query=search.value;
+	if(searchengine.value=="百度"){
+		window.open("https://www.baidu.com/s?wd="+query);
+	}else if(searchengine.value=="谷歌"){
+		window.open("http://www.google.com/search?q="+query);
+	}else if(searchengine.value=="搜狗"){
+		window.open("https://www.sogou.com/web?query="+query);
+	}else if(searchengine.value=="必应"){
+		window.open("http://cn.bing.com/search?q="+query);
+	}else if(searchengine.value=="谷歌学术"){
+		window.open("https://xue.glgoo.com/scholar?&q="+query);
+	}else if(searchengine.value=="微信"){
+		window.open("http://weixin.sogou.com/weixin?query="+query);
+	}else if(searchengine.value=="京东"){
+		window.open("http://search.jd.com/Search?enc=utf-8&keyword="+query);
+	}else if(searchengine.value=="淘宝"){
+		window.open("https://s.taobao.com/search?q="+query);
+	}else if(searchengine.value=="知乎"){
+		window.open("https://www.zhihu.com/search?q="+query);
+	}else if(searchengine.value=="微博"){
+		window.open("http://s.weibo.com/weibo/"+query);
+	}else if(searchengine.value=="豆瓣"){
+		window.open("https://www.douban.com/search?q="+query);
+	}else{
+		window.open("http://218.50.4.4/s/"+query);
+	}  
+}
+   
+document.onkeyup = function (e) {  
+    if (window.event)//如果window.event对象存在，就以此事件对象为准  
+        e = window.event;  
+    var code = e.charCode || e.keyCode;  
+    if (code == 13) {  
+        FindData();
+    }  
+} 	
+</script>
+
+<!-- <script>
+	$("#closehongbao").click(function(){
+  		$("#hongbao").slideUp("slow");
+	});
+	$("#hongbaoimage").click(function(){
+  		$("#hongbao").animate({
+  			width:"300px",
+  			height:"460px"
+  		});
+  		$("#hongbaoimage").animate({
+  			width:"300px",
+  			height:"450px"
+  		});
+	});
+	
+</script> -->
+<!-- <script>
+	SetIconBgColor()
+</script> -->
+<script>
+	$(document).ready(function(){
+		$("#adddiv").load("addsite.html");
+	});
+</script>
+
+<!-- localstorage -->
+<script>
+	if(window.localStorage){
+		var sites=window.localStorage;
+		if(sites["49"]!=null){
+			// console.log($("#keyboard").find("li"));
+			var objlis=$("#keyboard").find("li");
+			for(var i=0;i<objlis.length;i++){
+				var datakey=objlis[i].getAttribute("data-key");
+				// console.log(datakey)
+				if(sites[datakey]!=null){
+					var src=sites[datakey]+"/favicon.ico";
+					var imgnode='<img style="width:16px;height:16px;" src="'+src+'">';
+					// console.log(imgnode);
+					$(imgnode).appendTo(objlis[i]);
+				}
+			}
+		}else{
+			sites["49"]="http://www.bing.com";
+			sites["53"]="http://www.baidu.com";
+			sites["84"]="http://www.taobao.com";
+			sites["74"]="https://www.jd.com";
+			sites["87"]="https://weibo.com";
+			sites["90"]="http://www.zhihu.com";
+		
+			sites["77"]="https://meiriyiwen.com";
+			sites["81"]="https://mail.qq.com";
+			sites["65"]="https://www.aliyun.com/";
+			sites["66"]="https://www.bilibili.com";
+
+			sites["68"]="http://www.douban.com";
+
+			sites["66"]="https://www.bilibili.com";
+			sites["78"]="http://next.36kr.com";
+			sites["89"]="http://note.youdao.com";
+
+			// console.log($("#keyboard").find("li"));
+			var objlis=$("#keyboard").find("li");
+			for(var i=0;i<objlis.length;i++){
+				var datakey=objlis[i].getAttribute("data-key");
+				console.log(datakey)
+				if(sites[datakey]!=null){
+					var src=sites[datakey]+"/favicon.ico";
+					var imgnode='<img style="width:16px;height:16px;" src="'+src+'">';
+					console.log(imgnode);
+					$(imgnode).appendTo(objlis[i]);
+				}
+			}
+		}
+
+		$(document).keydown(function(e){
+			var url=sites[e.keyCode];
+			if(url!=null){
+				window.open(url);
+			}
+				
+		});
+
+		//设置localstorage
+		var objlis=$("#keyboard").find("li");
+		objlis.click(function(e){
+			// console.log(this.innerHTML);
+			var sitekey=this.getAttribute("data-key");
+			var sitevalue=window.prompt("请在此输入网站地址");
+			// alert(sitevalue);
+			if(sitevalue!=null&&sitekey!=null){
+				sites[sitekey]=sitevalue;
+				// var src=sitevalue+"/favicon.ico";
+				// var imgnode='<img style="width:16px;height:16px;" src="'+src+'">';
+				// console.log(imgnode);
+				// $(imgnode).appendTo(this);
+				window.location.reload();
+			}
+		});
+	}
+</script>
+</html>

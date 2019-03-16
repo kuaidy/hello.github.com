@@ -1,0 +1,42 @@
+{
+	"date":"2019-03-16",
+	"site":[
+		{
+			"name":"EasyWordPressBook",
+			"siteurl":"https://github.com/bestony/EasyWordPressBook",
+			"siteicon":"https://static.easyicon.net/preview/122/1229086.gif",
+			"sitedesc":"开源wordpress使用开发教程"
+			
+		},
+		{
+			"name":"全国12315互联网平台",
+			"siteurl":"http://www.12315.cn/",
+			"siteicon":"https://s2.ax1x.com/2019/03/16/AZuET0.png",
+			"sitedesc":"消费者投诉，举报平台"
+		},
+		{
+			"name":"fantopia",
+			"siteurl":"https://fantopia.club/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/Apg1KK.png",
+			"sitedesc":"翻托邦字幕组"
+		},
+		{
+			"name":"wangeditor",
+			"siteurl":"http://www.wangeditor.com/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/Apg1KK.png",
+			"sitedesc":"富文本编辑器"
+		},
+		{
+			"name":"squoosh",
+			"siteurl":"https://squoosh.app/",
+			"siteicon":"https://squoosh.app/logo.40348.svg",
+			"sitedesc":"图片压缩"
+		},
+		{
+			"name":"assetizr",
+			"siteurl":"https://assetizr.com/",
+			"siteicon":"https://assetizr.com/logo_written_1200.2cf80dd9.png",
+			"sitedesc":"图片压缩"
+		}
+	]
+}

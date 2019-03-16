@@ -1,0 +1,22 @@
+
+{
+    "7zip":{
+        "title":"7-zip",
+        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/7zip.jpg",
+        "description":"免费开源的压缩软件",
+        "downsite":{
+            "official":"https://www.7-zip.org/"
+        },
+        "document":[]
+    },
+    "bandzip":{
+        "title":"bandzip",
+        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/bandzip.jpg",
+        "description":"可靠快速的压缩软件",
+        "downsite":{
+            "official":"https://www.bandisoft.com/bandizip/cn/",
+            "dropbox":[]
+        },
+        "document":[""]
+    }
+}

@@ -1,0 +1,54 @@
+{
+	"date":"2019-03-10",
+	"site":[
+		{
+			"name":"draw",
+			"siteurl":"https://www.draw.io/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/Apg1KK.png",
+			"sitedesc":"在线画思维导图"
+			
+		},
+		{
+			"name":"sqltrainer",
+			"siteurl":"https://app.bytescout.com/sql-trainer/index.html",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/Apg1KK.png",
+			"sitedesc":"在线学sql"
+		},
+		{
+			"name":"XD中文网",
+			"siteurl":"https://xd.94xy.com/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/Apg1KK.png",
+			"sitedesc":"Adobe XD素材，教程"
+		},
+		{
+			"name":"logoko",
+			"siteurl":"https://www.logoko.com.cn/",
+			"siteicon":"https://www.logoko.com.cn/statics/images/index/logo.png",
+			"sitedesc":"免费在线制作logo"
+		},
+		{
+			"name":"piki",
+			"siteurl":"https://www.piti.fun/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/ApRrNQ.png",
+			"sitedesc":"PPT插件"
+		},
+		{
+			"name":"视频鱼",
+			"siteurl":"http://www.shipinyu.cn/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/ApR69s.png",
+			"sitedesc":"支持多个网站视频下载"
+		},
+		{
+			"name":"护照索引",
+			"siteurl":"https://www.passportindex.org/",
+			"siteicon":"https://ww1.sinaimg.cn/large/007i4MEmgy1g0xk5xmjxwj30jg03kmx9.jpg",
+			"sitedesc":"世界各国护照查询"
+		},
+		{
+			"name":"路过图床",
+			"siteurl":"https://imgchr.com/",
+			"siteicon":"https://s2.ax1x.com/2019/03/10/ApRhHU.png",
+			"sitedesc":"免费图片存贮"
+		}
+	]
+}

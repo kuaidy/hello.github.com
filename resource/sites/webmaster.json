@@ -1,0 +1,35 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"Alexa中国",
+			"siteurl":"http://www.alexa.cn/",
+			"status":"hot"
+		},
+		{
+			"name":"谷歌站长",
+			"siteurl":"https://search.google.com",
+			"status":"hot"
+		},
+		{
+			"name":"必应站长",
+			"siteurl":"https://www.bing.com/webmaster/home/"
+		},
+		{
+			"name":"神马站长",
+			"siteurl":"http://zhanzhang.sm.cn/"
+		},
+		{
+			"name":"360站长",
+			"siteurl":"http://zhanzhang.so.com"
+		},
+		{
+			"name":"搜狗站长",
+			"siteurl":"http://zhanzhang.sogou.com/"
+		},
+		{
+			"name":"百度统计",
+			"siteurl":"https://tongji.baidu.com"
+		}
+	]
+}

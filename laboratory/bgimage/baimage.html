@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>baimage</title>
+    <style>
+        #GenerateImage{
+            display: flex;
+            justify-content: center;
+            /* height: 100px; */
+            align-items: center;
+            flex-direction: column;
+        }
+        div#ImageShow {
+            margin: 50px 0px;
+            display: flex;
+            /* margin: 0 auto; */
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ImageClone{
+            width: 400px;
+            height: 300px;
+            position: fixed;
+            top: 0%;
+            right: 0;
+            z-index: -999;
+            opacity: 0;
+            overflow: hidden;
+        }
+        div#ImageDown {
+            margin: 20px 0px;
+            display: flex;
+            /* margin: 0 auto; */
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .ImageItem {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+
+        }
+        span {
+            border: 1px solid #ccc;
+            box-shadow: 1px 2px 2px #ccc;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        canvas {
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="GenerateImage">
+        <span onclick="Generate()">随机生成</span>
+        <p>点击随机生成一张背景图</p>
+        <p>本站不保存任何图片，请及时下载</p>
+    </div>
+    <div id="ImageShow">
+        <div id="Imageid" class="ImageItem">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div id="ImageDown"></div>
+</body>
+<script>
+    function Generate(){
+        // var ImageItems=document.getElementsByClassName("ImageItem");
+        // for(var i=0;i<ImageItems.length;i++){
+        //     //背景颜色随机
+        //     var x=Math.floor((Math.random()*100+1));
+        //     var y=Math.floor((Math.random()*100+1));
+        //     var z=Math.floor((Math.random()*100+1));
+        //     ImageItems[i].style.backgroundColor="#"+x+y+z;
+
+        //     //图标随机
+        //     var num=parseInt(Math.random()*10);
+            
+        //     // var img = "https://img.alicdn.com/bao/uploaded/TB1qimQIpXXXXXbXFXXSutbFXXX.jpg";
+        //     var img = num+".png"
+            
+        //     var image = new Image();
+        //     image.crossOrigin = '';
+        //     image.src = img;
+        //     image.onload = function(){
+        //         var base64 = getBase64Image(image);
+        //         console.log()
+        //         var ImageIcons=document.getElementsByTagName("img");
+        //         ImageIcons[0].src=base64;
+        //     }
+        // }
+
+            //背景颜色随机
+            var x=Math.floor((Math.random()*100+1));
+            var y=Math.floor((Math.random()*100+1));
+            var z=Math.floor((Math.random()*100+1));
+            $("#Imageid").css({
+                "background-color":"#"+x+y+z
+            });
+            $("#ImageClone").css({
+                "background-color":"#"+x+y+z
+            });
+
+            //图标随机
+            var num=parseInt(Math.random()*10);
+            
+            // var img = "https://img.alicdn.com/bao/uploaded/TB1qimQIpXXXXXbXFXXSutbFXXX.jpg";
+            var img ="imgs/"+num+".png"
+            
+            var image = new Image();
+            image.crossOrigin = '';
+            image.src = img;
+            image.onload = function(){
+                var base64 = getBase64Image(image);
+                $("img").attr("src",base64);
+                cutDiv();
+            }
+
+            
+    }
+    function getBase64Image(img) {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+            var ext = img.src.substring(img.src.lastIndexOf(".")+1).toLowerCase();
+            var dataURL = canvas.toDataURL("image/"+ext);
+            return dataURL;
+            }
+
+    function cutDiv(){
+        html2canvas($("#Imageid"),{
+            useCORS:true,
+            onrendered:function(canvas){
+                var url=canvas.toDataURL();
+                $("#ImageDown").append(canvas);
+            }
+        });
+    } 
+
+// function cutDiv(){
+//     // html2canvas($("#Imageid")).then(canvas => {
+//     //     $("#ImageDown").append(canvas)
+//     // }); 
+//     domtoimage.toPng($("#Imageid"))
+//     .then(function (dataUrl) {
+//         var img = new Image();
+//         img.src = dataUrl;
+//         document.body.appendChild(img);
+//     });  
+// } 
+
+
+
+    function GetBase64(img){
+        var canvas=document.createElement('canvas');
+        canvas.width=img.width;
+        canvas.height=img.height;
+        var ctx=canvas.getContext("2d");
+        ctx.drawImage(img,0,0,canvas.width,canvas.height);
+        var dataurl=canvas.toDataURL();
+        return dataurl;
+    }
+
+        //实现将项目的图片转化成base64
+    function convertImgToBase64(url, callback, outputFormat){
+       var canvas = document.createElement('CANVAS'),
+    　　ctx = canvas.getContext('2d'),
+    　　img = new Image;
+    　　img.crossOrigin = 'Anonymous';
+    　　img.onload = function(){
+        　　canvas.height = img.height;
+        　　canvas.width = img.width;
+        　　ctx.drawImage(img,0,0);
+        　　var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+        　　callback.call(this, dataURL);
+        　　canvas = null; 
+        };
+    　　img.src = url;
+    } 
+
+</script>
+
+
+</html>

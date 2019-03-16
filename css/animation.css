@@ -1,0 +1,119 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+	/*background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527527731361&di=db8a4640ae1c732499fd989d2f3bded3&imgtype=0&src=http%3A%2F%2Fwww.5068.com%2Fuploads%2Fallimg%2F171124%2F1-1G124110134.jpg);*/
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+    animation: Gradient-RDc81Ss 10s ease infinite;
+	
+}
+#main{
+	width: 60vw;
+	background-color: rgba(255,255,255,0.5);
+	margin: auto ;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#header{
+	background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527529077616&di=95ef3aa75492f1b7a3f0b3c51ffb324d&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160829%2F67-160R9111A0.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -90px;
+	height: 300px;
+	width: 100%;
+	border-radius: 5px 5px 0px 0px;
+	    background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+
+#content{
+	/*background-color: blue;*/
+	/*height: 300px;*/
+	/*padding: 10px;*/
+	/*width: 100%;*/
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.lookcartoon{
+	width: 100%;
+	font-size: 15px;
+	color: #000;
+}
+ul.sitesul{
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 100%;
+
+}
+.siteli{
+	width: 23%;
+	min-width: 18%;
+	margin:1%;
+	/*height: 30px;*/
+	background-color: #fff;
+	/*line-height: 50px;*/
+	word-wrap: break-word;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	border-radius: 4px;
+}
+
+
+.siteli a{
+	display: block;
+	text-decoration: none;
+	border-radius: 4px;
+	color: #000;
+}
+
+.sitedtail{
+	margin: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.sitename{
+	font-size: 20px;
+	width: 80%;
+	font-family: 微软雅黑;
+}
+.siteimg{
+    position: relative;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.imgurl{
+	width: 100%
+}
+#sitecartoon{
+	background-color: #ccc;
+}
+.sitedesc{
+	font-size: 12px;
+	color: #bbb;
+}
+/*#footer{
+	background-color: green;
+	height: 300px;
+	width: 100%;
+}*/
