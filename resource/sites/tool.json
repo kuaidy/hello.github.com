@@ -69,6 +69,10 @@
 		{
 			"name":"在线白板",
 			"siteurl":"https://witeboard.com/"
+		},
+		{
+			"name":"微词云",
+			"siteurl":"https://zh-cn.minitagcloud.com/"
 		}
 	]
 }
