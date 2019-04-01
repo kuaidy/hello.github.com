@@ -67,6 +67,10 @@
 		{
 			"name":"TopBook",
 			"siteurl":"http://topbook.cc/"
+		},
+		{
+			"name":"蜗牛视频",
+			"siteurl":"https://snailok.com/"
 		}
 	]
 }
