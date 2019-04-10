@@ -1,0 +1,31 @@
+{
+	"date":"2019-04-10",
+	"site":[
+		{
+			"name":"湾区日报",
+			"siteurl":"https://wanqu.co/",
+			"siteicon":"https://wanqu.co/static/images/wanqu/round-logo.png",
+			"sitedesc":"关注创业，每天推荐5篇文章"
+			
+		},
+		{
+			"name":"异步社区",
+			"siteurl":"https://www.epubit.com/",
+			"siteicon":"",
+			"sitedesc":"编程书籍"
+		},
+		{
+			"name":"花样影视",
+			"siteurl":"http://i.hyys.me/webIndex.php",
+			"siteicon":"http://i.hyys.me/templates/default/images/index/hy_logo.png",
+			"sitedesc":"在线电影，视频"
+		},
+		{
+			"name":"协谎网",
+			"siteurl":"https://routinepanic.com",
+			"siteicon":"https://routinepanic.com/images/logo@48.png",
+			"sitedesc":"一个汉化 Stack Overflow 的网站"
+		}
+		
+	]
+}
