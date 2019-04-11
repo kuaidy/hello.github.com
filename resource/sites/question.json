@@ -36,6 +36,10 @@
 		{
 			"name":"百度经验",
 			"siteurl":"https://jingyan.baidu.com/"
+		},
+		{
+			"name":"协慌网",
+			"siteurl":"https://routinepanic.com/"
 		}
 	]
 }

@@ -63,6 +63,14 @@
 		{
 			"name":"数字尾巴",
 			"siteurl":"http://www.dgtle.com/"
+		},
+		{
+			"name":"InfoQ",
+			"siteurl":"https://www.infoq.cn/"
+		},
+		{
+			"name":"湾区日报",
+			"siteurl":"https://wanqu.co/"
 		}
 
 	]
