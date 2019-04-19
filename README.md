@@ -1,4 +1,4 @@
-# lead (nav.rdonly.com)
+# lead (https://nav.rdonly.com)
 
 ## 简介
 一个导航网站，收集自己平常会用的一些网站，软件以及软件的使用教程。
