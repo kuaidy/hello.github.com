@@ -34,6 +34,14 @@
 		{
 			"name":"黑客派",
 			"siteurl":"https://hacpai.com/"
+		},
+		{
+			"name":"数字尾巴",
+			"siteurl":"http://www.dgtle.com/"
+		},
+		{
+			"name":"zfrontier",
+			"siteurl":"https://www.zfrontier.com/"
 		}
 	]
 }
