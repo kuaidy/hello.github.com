@@ -49,6 +49,14 @@ span.name {
     margin-top: 10px;
 }
 
+#loading_more {
+    background-color: #c63;
+    padding: 5px 10px;
+    /* width: 69vw; */
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 600px) {
     div#included_content {

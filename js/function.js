@@ -148,14 +148,19 @@ function SetIconBgColor(){
 }
 
 //循环获取最近收录的网站，文件资源按时间命名
-function GetIncludedData(){
-	var today=GetDate();
-	$.ajaxSettings.async = false; 
+var globaldays="";
+function GetIncludedData(day){
+	// days=GetDate();
+	if(globaldays==""){
+		globaldays=GetDate();
+	}else{
+		globaldays=DateAdd(globaldays,-day);
+	}
+	$.ajaxSettings.async = false;
 	var items=[];
 	var includeli=[];
-	for(var i=0;i<7;i++){
-		var filepath="./resource/encounter/"+today+".json";
-		
+	for(var i=0;i<day;i++){
+		var filepath="./resource/encounter/"+globaldays+".json";
 		$.getJSON(filepath,function(data){
 			console.log(data);
 			var inlcudeditem=[];
@@ -174,7 +179,7 @@ function GetIncludedData(){
 			inlcudeditem.push($(includeul).append(includedli));
 			$("#included_content").append(inlcudeditem);
 		});
-		today=DateAdd(today,-1);
+		globaldays=DateAdd(globaldays,-1);
 		// console.log(itemschild);
 	}
 }

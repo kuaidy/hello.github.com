@@ -123,6 +123,10 @@
             </div> -->
         </div>
 
+        <!-- 加载更多 -->
+        <div id="loading_more">加载更多</div>
+
+
 		<div id="adddiv"></div>
 
 	    <div id="footer" class="outbox">
@@ -139,7 +143,10 @@
 </body>
 <script type="text/javascript" src="js/function.js"></script>
 <script type="text/javascript">
-        GetIncludedData();
+        GetIncludedData(7);
+        $("#loading_more").click(function(){
+            GetIncludedData(7);
+        });
 </script>
 <script>
 	$(document).ready(function(){
