@@ -54,6 +54,14 @@
 		{
 			"name":"动漫下载",
 			"siteurl":"http://dl3.anime.nico.click/"
+		},
+		{
+			"name":"M站",
+			"siteurl":"https://www.bimibimi.cc/"
+		},
+		{
+			"name":"嘀哩嘀哩",
+			"siteurl":"https://www.bimibimi.cc/"
 		}
 	]
 }
