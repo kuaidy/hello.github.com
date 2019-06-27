@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #1E1E1E;
+}
+pre{
+    color:#fff;
+}
