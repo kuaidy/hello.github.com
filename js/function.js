@@ -216,3 +216,21 @@ function GetDate(){
 	}
 	return y+'-'+m+'-'+t;
 } 
+
+
+//首页轮播 广告
+function ChangeHotProject()
+{
+	var adimage=["http://www.rdonly.com/wp-content/uploads/2019/06/RaspberryPi.png","http://www.rdonly.com/wp-content/uploads/2019/06/Digitalychee.png"];
+	var adurl=["https://s.click.taobao.com/MpjRk6w","https://s.click.taobao.com/wo5Pk6w"];
+	var i=0;
+	setInterval(function(){
+		console.log(adurl.length);
+		if(i==adurl.length){
+			i=0;
+		}
+		$("#RecommandUrl").attr("href",adurl[i]);
+		$("#RecommandView").css("background-image","url("+adimage[i]+")");
+		i++;
+	},5000);
+}
