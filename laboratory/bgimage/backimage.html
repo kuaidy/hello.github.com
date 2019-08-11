@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>baimage</title>
+    <style>
+        
+    </style>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="./bgstyle.css">
+    <script src="./backimage.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="GenerateImage">
+            <div id=header>BackImage Beta</div>
+            <div id="setwidth" class="setting">
+                <span>背景宽度</span>
+                <input type="text" placeholder="auto" id="bgwidth" class="FormControl"></input>
+            </div>
+            <div id="setheight" class="setting">
+                <span>背景高度</span>
+                <input type="text" placeholder="auto" id="bgheight" class="FormControl">
+            </div>
+            <div id="setbgcolor" class="setting">
+                <span>背景色</span>
+                <input type="color" id="bgcolor" class="FormControl">
+            </div>
+            <div id="setbgimg" class="setting">
+                <span>图标</span>
+                <input type="text" placeholder="请输入图标链接地址" id="bgicon" class="FormControl">
+            </div>
+            <div id="setbgimg" class="setting">
+                <input type="file" accept="image/png, image/jpeg,image/jpg" id="localbgicon"></input>
+            </div>
+            <div id="setbgimg" class="setting">
+                <span>图标宽度</span>
+                <input type="text" placeholder="auto" id="bgiconwidth" class="FormControl">
+            </div>
+            <div id="setbgimg" class="setting">
+                <span>图标高度</span>
+                <input type="text" placeholder="auto" id="bgiconheight" class="FormControl">
+            </div>
+            <!-- <div id="setbgimg" class="setting">
+                <input type="checkbox" value="图标平铺">图标平铺</input>
+            </div> -->
+            <!-- <div id="setbgimg" class="setting">
+                <select name="" id="">
+                        <option value="">自定义</option>
+                    <option value="200*200">微信主图</option>
+                    <option value="1014*507">网易大图模式</option>
+                    <option value="200*96">大鱼号封面</option>
+                </select>
+            </div> -->
+            <div id="setbgimg" class="setting">
+                <!-- <button id="Generate">随机生成</button> -->
+                <button id="reset" class="Option">重制</button>
+                <button id="download" class="Option">下载</button>
+                <!-- <button>公开</button> -->
+            </div>
+            <div id="footer" class="setting">
+                <span><a href="https://support.qq.com/products/42094?">意见反馈</a></span>
+                <span>V 2.0.0</span>
+            </div>
+        </div>
+        <div id="ImageShow">
+            <div id="Imageid" class="ImageItem">
+                <img id="ImageBgicon" src="" alt="" crossorigin>
+            </div>
+        </div>
+        <!-- <div id="ImageDown"></div> -->
+    </div>
+    
+</body>
+<script>
+    //随机背景色
+    $("#Generate").click(function(){
+        GenerateColor();
+    });
+    //改变宽度
+    $("#bgwidth").keyup(function(){
+        var width=$("#bgwidth").val();
+        ChangeWidth(width);
+    });
+    //改变高度
+    $("#bgheight").keyup(function(){
+        var height=$("#bgheight").val();
+        ChangeHeight(height);
+    });
+    //改变背景色
+    $("#bgcolor").change(function(){
+        var bgcolor=$("#bgcolor").val();
+        ChangeColor(bgcolor);
+    });
+    //网络图标
+    $("#bgicon").change(function(){
+        var bgicon=$("#bgicon").val();
+        ChangeIcon(bgicon);
+    });
+    //本地图标
+    $("#localbgicon").change(function(e){
+        ChangeLocalIcon(e);
+    });
+    //图标宽度
+    $("#bgiconwidth").change(function(){
+        var iconwidth=$("#bgiconwidth").val();
+        ChangeIconWidth(iconwidth);
+    });
+    //图标宽度
+    $("#bgiconheight").change(function(){
+        var iconheight=$("#bgiconheight").val();
+        ChangeIconHeight(iconheight);
+    });
+    //下载
+    $("#download").click(function(){
+        var bgicon=$("#bgicon").val();
+        DownLoad(bgicon);
+    });
+</script>
+
+
+</html>
