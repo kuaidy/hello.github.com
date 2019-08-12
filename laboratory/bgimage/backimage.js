@@ -169,3 +169,7 @@ function ChangeLocalIcon(e){
         $("#ImageBgicon").attr("src",imagedata);
     };
 }
+//重制
+function Reset(){
+   $("div input").val("");
+}
