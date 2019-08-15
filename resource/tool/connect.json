@@ -1,7 +1,7 @@
 {
 	"SunLogin":{
 		"title":"向日葵",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/sunlogin.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/sunlogin.png",
 		"description":"免费稳定的远程链接工具",
 		"downsite":{
 			"official":"https://sunlogin.oray.com/zh_CN/download/"
@@ -9,7 +9,7 @@
 	},
 	"Putty":{
 		"title":"Putty",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
 		"description":"免费的Telnet、SSH客户端",
 		"downsite":{
 			"official":"https://www.putty.org/"
@@ -17,7 +17,7 @@
 	},
 	"Tim":{
 		"title":"Tim",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/tim.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/tim.png",
 		"description":"交流，协作，办公工具",
 		"downsite":{
 			"official":"https://office.qq.com/"
@@ -25,7 +25,7 @@
 	},
 	"TeamViewer":{
 		"title":"TeamViewer",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/teamviewer.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/teamviewer.png",
 		"description":"远程支持访问工具",
 		"downsite":{
 			"official":"https://www.teamviewer.com/zhCN/"

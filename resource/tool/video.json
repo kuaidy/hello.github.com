@@ -1,7 +1,7 @@
 {
     "potplayer":{
         "title":"PotPlayer",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/potplayer.jpg",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/potplayer.jpg",
         "description":"超级好用的视频播放软件",
         "downsite":{
             "official":"http://potplayer.daum.net/?lang=zh_CN"
@@ -10,7 +10,7 @@
     },
     "jiyingpai":{
         "title":"极影派",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/jiyingpai.png",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/jiyingpai.png",
         "description":"影片管理软件",
         "downsite":{
             "official":"http://www.jeenpi.com/"

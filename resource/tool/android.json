@@ -1,7 +1,7 @@
 {
     "wywnds":{
         "title":"网易蜗牛读书",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/wywnds.jpg",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/wywnds.jpg",
         "description":"每天阅读一小时",
         "downsite":{
             "official":"http://du.163.com/"
@@ -10,7 +10,7 @@
     },
     "jdss":{
         "title":"简单搜索",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/jdss.png",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/jdss.png",
         "description":"永无广告",
         "downsite":{
             "official":"http://secr.baidu.com/"
@@ -19,7 +19,7 @@
     },
     "kkbrowser":{
         "title":"夸克浏览器",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/kuake.jpg",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/kuake.jpg",
         "description":"由简至极，回归初心",
         "downsite":{
             "official":"http://www.myquark.cn/"
@@ -28,7 +28,7 @@
     },
     "luobo":{
         "title":"萝卜书摘",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/lbsz.png",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/lbsz.png",
         "description":"为思考，而阅读",
         "downsite":{
             "official":"http://www.luoboshuzhai.com/"

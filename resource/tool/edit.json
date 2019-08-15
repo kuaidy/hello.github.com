@@ -1,7 +1,7 @@
 {
 	"sublime":{
 		"title":"sublime text",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/sublime.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/sublime.jpg",
 		"description":"一款配色很骚的编辑器,支持多种语言以及vim",
 		"downsite":{
 			"official":"http://www.sublimetext.com/",
@@ -11,7 +11,7 @@
 	},
 	"Atom":{
 		"title":"Atom",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/atom.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/atom.jpg",
 		"description":"一款跨平台而且强大的编辑器",
 		"downsite":{
 			"official":"https://atom.io/"
@@ -19,7 +19,7 @@
 	},
 	"nodepad":{
 		"title":"nodepad++",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/nodepad%2B%2B.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/nodepad%2B%2B.png",
 		"description":"一款轻便实用的代码编辑器",
 		"downsite":{
 			"official":"https://notepad-plus-plus.org/"
@@ -27,7 +27,7 @@
 	},
 	"hbuilder":{
 		"title":"hbuilder",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/hbuilder.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/hbuilder.png",
 		"description":"一款快捷的好看的代码编辑器",
 		"downsite":{
 			"official":"http://www.dcloud.io/"
@@ -35,7 +35,7 @@
 	},
 	"gedit":{
 		"title":"gedit",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/gedit.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/gedit.png",
 		"description":"跨平台轻便的编辑器",
 		"downsite":{
 			"official":"https://gedit.en.softonic.com"
@@ -43,7 +43,7 @@
 	},
 	"vim":{
 		"title":"vim",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/vim.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/vim.jpg",
 		"description":"功能强大，命令操作",
 		"downsite":{
 			"official":"https://www.vim.org/"
@@ -51,7 +51,7 @@
 	},
 	"emacs":{
 		"title":"emacs",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/emacs.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/emacs.png",
 		"description":"集成开发环境和文本编辑器",
 		"downsite":{
 			"official":"http://www.gnu.org/software/emacs/"
@@ -59,7 +59,7 @@
 	},
 	"visualstudio":{
 		"title":"visual studio",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/visualstudio.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/visualstudio.jpg",
 		"description":"强大IDE",
 		"downsite":{
 			"official":"https://code.visualstudio.com/"
@@ -67,7 +67,7 @@
 	},
 	"eclipse":{
 		"title":"eclipse",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/eclipse.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/eclipse.jpg",
 		"description":"跨平台IDE",
 		"downsite":{
 			"official":"https://www.eclipse.org/downloads/"

@@ -1,7 +1,7 @@
 {
 	"CCleaner":{
 		"title":"CCleaner",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/ccleaner.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/ccleaner.jpg",
 		"description":"一款好用国外的清理工具",
 		"downsite":{
 			"official":"http://www.piriform.com/ccleaner"
@@ -10,7 +10,7 @@
 	},
 	"Dism++":{
 		"title":"Dism++",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/dism.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/dism.png",
 		"description":"轻巧实用，不流氓的良心系统工具",
 		"downsite":{
 			"official":"https://www.chuyu.me/zh-Hans/index.html"
@@ -18,7 +18,7 @@
 	},
 	"everything":{
 		"title":"everything",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/everything.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/everything.png",
 		"description":"文件快速搜索工具",
 		"downsite":{
 			"official":"http://www.voidtools.com/"
@@ -26,7 +26,7 @@
 	},
 	"火绒安全":{
 		"title":"火绒安全",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/huorong.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/huorong.jpg",
 		"description":"相对好用的杀毒软件",
 		"downsite":{
 			"official":"https://www.huorong.cn/"
@@ -34,7 +34,7 @@
 	},
 	"小红伞":{
 		"title":"小红伞",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/xiaohongsan.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/xiaohongsan.jpg",
 		"description":"轻巧强悍的免费杀毒软件",
 		"downsite":{
 			"official":"https://www.avira.com/"
@@ -42,7 +42,7 @@
 	},
 	"盘云":{
 		"title":"盘云",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/panyun.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/panyun.png",
 		"description":"简洁，可靠，在线重装系统",
 		"downsite":{
 			"official":"https://www.panyun.com/"
@@ -50,7 +50,7 @@
 	},
 	"drclear":{
 		"title":"DrClear",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/Dr.Cleaner.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/Dr.Cleaner.png",
 		"description":"受欢迎的mac系统清理工具",
 		"downsite":{
 			"official":"https://www.drcleaner.com/zh-hans/"
@@ -58,7 +58,7 @@
 	},
 	"uzer":{
 		"title":"Uzer",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/uzer.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/uzer.png",
 		"description":"即时使用云端应用",
 		"downsite":{
 			"official":"https://uzer.me/"

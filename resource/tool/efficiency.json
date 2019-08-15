@@ -1,7 +1,7 @@
 {
     "Lily":{
         "title":"Lily快速启动",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
         "description":"功能丰富的软件启动工具",
         "downsite":{
             "dropbox":["https://pan.baidu.com/s/1RKN8BadFlrFN7SQel3uVaA","密码: iujv"]
@@ -9,7 +9,7 @@
     },
     "WPS":{
         "title":"WPS文档",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/wps.png",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/wps.png",
         "description":"多人协作文档",
         "downsite":{
             "official":"https://docs.wps.cn/"
@@ -17,7 +17,7 @@
     },
     "PasteEx":{
         "title":"PasteEx",
-        "icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pasteex.png",
+        "icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pasteex.png",
         "description":"将剪贴板文本/图片/代码等内容快速直接粘贴保存成文件的小工具",
         "downsite":{
             "official":"https://github.com/huiyadanli/PasteEx"

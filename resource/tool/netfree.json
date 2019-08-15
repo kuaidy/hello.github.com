@@ -1,7 +1,7 @@
 {
 	"lantern":{
 		"title":"蓝灯",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/lantern_logo.png",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/lantern_logo.png",
 		"description":"翻墙软件，让你更自由的上网",
 		"downsite":{
 			"official":"https://github.com/getlantern/forum"
@@ -9,7 +9,7 @@
 	},
 	"TorBrowser":{
 		"title":"洋葱浏览器",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/torbrowser.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/torbrowser.jpg",
 		"description":"可以匿名上网的浏览器",
 		"downsite":{
 			"official":"https://www.torproject.org/index.html.en"
@@ -17,7 +17,7 @@
 	},
 	"Firefly":{
 		"title":"萤火虫",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/default.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/default.jpg",
 		"description":"开源的科学上网工具",
 		"downsite":{
 			"official":"https://github.com/yinghuocho/firefly-proxy"
@@ -25,7 +25,7 @@
 	},
 	"xx-net":{
 		"title":"xx-net",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/xx_net.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/xx_net.jpg",
 		"description":"易用的翻墙软件",
 		"downsite":{
 			"official":"https://github.com/XX-net/XX-Net"
@@ -33,7 +33,7 @@
 	},
 	"dowsDNS":{
 		"title":"dowsDNS",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/default.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/default.jpg",
 		"description":"通过建立本地dns服务器来实现科学上网",
 		"downsite":{
 			"official":"https://github.com/dowsnature/dowsDNS/"
@@ -41,7 +41,7 @@
 	},
 	"ShadowSocks":{
 		"title":"ShadowSocks",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/default.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/default.jpg",
 		"description":"设置代理自由连接网络",
 		"downsite":{
 			"dropbox":["https://pan.baidu.com/s/1F45-PCSsbZhB0csie_-zOA","n4pu"]

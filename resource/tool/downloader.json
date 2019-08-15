@@ -1,7 +1,7 @@
 {
 	"qBittorrent":{
 		"title":"qBittorrent",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/qBittorrent.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/qBittorrent.jpg",
 		"description":"开源好用的种子下载工具",
 		"downsite":{
 			"official":"https://www.qbittorrent.org/"
@@ -9,7 +9,7 @@
 	},
 	"PanDownload":{
 		"title":"PanDownload",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
 		"description":"不限速的百度云下载工具",
 		"downsite":{
 			"official":"http://pandownload.com/index.html",
@@ -18,7 +18,7 @@
 	},
 	"proxyeedown":{
 		"title":"proxyee-down",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
 		"description":"开源下载工具，百度云不限速",
 		"downsite":{
 			"official":"https://github.com/monkeyWie/proxyee-down"
@@ -26,7 +26,7 @@
 	},
 	"IDM":{
 		"title":"IDM",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
 		"description":"快速好用的下载器",
 		"downsite":{
 			"official":"http://www.internetdownloadmanager.com/download.html",
@@ -35,7 +35,7 @@
 	},
 	"FreeDownload":{
 		"title":"FreeDownload",
-		"icon":"http://appfuns.oss-cn-hongkong.aliyuncs.com/pandownload.jpg",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/pandownload.jpg",
 		"description":"无广告的良心下载器,无中文版",
 		"downsite":{
 			"official":"https://www.freedownloadmanager.org/"
