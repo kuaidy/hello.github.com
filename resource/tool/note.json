@@ -61,13 +61,12 @@
 			"official":"https://tamlok.github.io/vnote/"
 		}
 	},
-	"notable":{
-		"title":"notable",
-		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/toolicon/2019-02-12_155859_notable.png",
-		"description":"一个用Markdown语法做笔记的开源桌面软件",
+	"MicrosoftTodo":{
+		"title":"MicrosoftTodo",
+		"icon":"http://www.rdonly.com/wp-content/uploads/2019/08/Microsofttodo.png",
+		"description":"微软制作的事件清单软件",
 		"downsite":{
-			"official":"https://github.com/notable/notable"
-		},
-		"document":["使用说明","https://github.com/notable/notable"]
+			"official":"https://todo.microsoft.com/zh-cn"
+		}
 	}
 }
