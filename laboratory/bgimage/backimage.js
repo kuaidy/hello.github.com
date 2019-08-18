@@ -101,11 +101,20 @@ function ChangeIcon(bgicon){
     $('#ImageBgicon').attr("src", bgicon);
 }
 //改变图标宽度
-function ChangeIconWidth(iconwidth){
-    $("#ImageBgicon").width(iconwidth);
+function ChangeIconWidth(){
+    var iconwidth=$("#bgiconwidth").val();
+    var bgwidth=$("#Imageid").width();
+
+    var Iconwidth=$("#ImageBgicon").width();
+    if(iconwidth>bgwidth){
+        $("#ImageBgicon").width(bgwidth);
+    }else{
+        $("#ImageBgicon").width(iconwidth);
+    }
 }
 //改变图标高度
 function ChangeIconHeight(iconheight){
+    var iconheight=$("#bgiconheight").val();
     $("#ImageBgicon").height(iconheight);
 }
 
@@ -167,9 +176,30 @@ function ChangeLocalIcon(e){
     reader.onload=function(){
         var imagedata=reader.result;
         $("#ImageBgicon").attr("src",imagedata);
+
+        var bgwidth=$("#Imageid").width();
+        // console.log(bgwidth);
+        var img = new Image();
+        img.onload = function () {
+            // console.log(this.width);
+            if(this.width>bgwidth){
+                $("#ImageBgicon").width(bgwidth);
+            }
+        };
+        img.src=imagedata;
     };
 }
 //重制
 function Reset(){
    $("div input").val("");
+}
+
+//选择图片类型
+function ChangeItem(){
+    var width=$("#ChangeType").find("option:selected").attr("data-width");
+    $("#Imageid").width(width);
+    $("#bgwidth").val(width);
+    var height=$("#ChangeType").find("option:selected").attr("data-height");
+    $("#Imageid").height(height);
+    $("#bgheight").val(height);
 }

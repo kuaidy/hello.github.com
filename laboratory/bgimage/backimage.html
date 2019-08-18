@@ -16,7 +16,7 @@
 <body>
     <div id="main">
         <div id="GenerateImage">
-            <div id=header>BackImage Beta</div>
+            <div id=header>BGIMAGE BETA</div>
             <div id="setwidth" class="setting">
                 <span>背景宽度</span>
                 <input type="text" placeholder="auto" id="bgwidth" class="FormControl"></input>
@@ -33,29 +33,47 @@
                 <span>图标</span>
                 <input type="text" placeholder="请输入图标链接地址" id="bgicon" class="FormControl">
             </div>
-            <div id="setbgimg" class="setting">
+            <div id="setIcon" class="setting">
                 <input type="file" accept="image/png, image/jpeg,image/jpg" id="localbgicon"></input>
             </div>
-            <div id="setbgimg" class="setting">
+            <div id="setIconHeight" class="setting">
                 <span>图标宽度</span>
                 <input type="text" placeholder="auto" id="bgiconwidth" class="FormControl">
             </div>
-            <div id="setbgimg" class="setting">
+            <div id="setIconHeight" class="setting">
                 <span>图标高度</span>
                 <input type="text" placeholder="auto" id="bgiconheight" class="FormControl">
             </div>
+            <!-- <div id="setText" class="setting">
+                <span>文字内容</span>
+                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+            </div>
+            <div id="setText" class="setting">
+                <span>文字大小</span>
+                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+            </div>
+            <div id="setText" class="setting">
+                <span>文字类型</span>
+                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+            </div>
+            <div id="setText" class="setting">
+                <span>文字颜色</span>
+                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+            </div> -->
             <!-- <div id="setbgimg" class="setting">
                 <input type="checkbox" value="图标平铺">图标平铺</input>
             </div> -->
-            <!-- <div id="setbgimg" class="setting">
-                <select name="" id="">
-                        <option value="">自定义</option>
-                    <option value="200*200">微信主图</option>
-                    <option value="1014*507">网易大图模式</option>
-                    <option value="200*96">大鱼号封面</option>
+            <div id="setbgtype" class="setting">
+                <span>平台选择</span>
+                <select name="" id="ChangeType">
+                    <option value="">自定义</option>
+                    <option value="" data-width="750" data-height="375">网易大图模式</option>
+                    <option value="" data-width="700" data-height="200">少数派</option>
+                    <option value="" data-width="200" data-height="96">大鱼号封面</option>
+                    <option value="" data-width="360" data-height="270">企鹅号</option>
                 </select>
-            </div> -->
-            <div id="setbgimg" class="setting">
+            </div>
+            <div id="OptionItems" class="setting">
                 <!-- <button id="Generate">随机生成</button> -->
                 <button id="reset" class="Option">重制</button>
                 <button id="download" class="Option">下载</button>
@@ -69,6 +87,7 @@
         <div id="ImageShow">
             <div id="Imageid" class="ImageItem">
                 <img id="ImageBgicon" src="" alt="" crossorigin>
+                <span id="ImageText"></span>
             </div>
         </div>
         <!-- <div id="ImageDown"></div> -->
@@ -106,13 +125,11 @@
     });
     //图标宽度
     $("#bgiconwidth").change(function(){
-        var iconwidth=$("#bgiconwidth").val();
-        ChangeIconWidth(iconwidth);
+        ChangeIconWidth();
     });
     //图标宽度
     $("#bgiconheight").change(function(){
-        var iconheight=$("#bgiconheight").val();
-        ChangeIconHeight(iconheight);
+        ChangeIconHeight();
     });
     //下载
     $("#download").click(function(){
@@ -123,6 +140,11 @@
     $("#reset").click(function(){
         Reset();
     });
+    //下拉框选择事件
+    $("#ChangeType").change(function(){
+        ChangeItem();
+    });
+
 </script>
 
 

@@ -41,7 +41,7 @@ div#ImageShow {
     height: 100%;
 }
 #ImageBgicon{
-    width:400px;
+    width: auto;
     height: auto;
 }
 #ImageClone{
@@ -109,4 +109,12 @@ button#reset {
 div#footer {
     color: #aaa;
     margin-top: 10px;
+}
+
+select#ChangeType {
+    border: 1px solid #ccc;
+    padding: 2px;
+    /* text-align: center; */
+    height: 2.0em;
+    border-radius: .25rem;
 }
