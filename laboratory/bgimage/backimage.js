@@ -120,9 +120,13 @@ function ChangeIconHeight(iconheight){
 
 //绘制图像
 function DownLoad(){
-    var width=$("#bgwidth").val();
-    var height=$("#bgheight").val();
+    var width=$("#Imageid").width();
+    var height=$("#Imageid").height();
     var bgcolor=$("#bgcolor").val();
+
+    //获取span的宽度
+    var spanwidth=$("#ImageText").width();
+    var spanheight=$("#ImageText").height();
 
     var img=document.getElementById("ImageBgicon");
     var imgbase64="";
@@ -130,7 +134,7 @@ function DownLoad(){
     var image = new Image();
     image.crossOrigin = '';
     image.src = img.src;
-    // console.log(img.src);
+
     image.onload = function(){
         if(!img.src.indexOf("base64"))
         {
@@ -147,7 +151,30 @@ function DownLoad(){
     var ctx=canvas.getContext("2d");
     ctx.fillStyle=bgcolor;
     ctx.fillRect(0,0,width,height);
-    ctx.drawImage(img,(width-img.width)/2,(height-img.height)/2,img.width,img.height);
+    ctx.drawImage(img,(width-img.width-spanwidth)/2,(height-img.height)/2,img.width,img.height);
+
+    
+    //获取文字
+    var textcontent=$("#ImageText").text();
+    var textsize=$("#ImageText").css("font-size");
+    var textfamily=$("#ImageText").css("font-family");
+    // 设置字体
+    ctx.font = textsize+" "+textfamily;
+    console.log(spanwidth);
+    console.log(spanheight);
+    console.log(textsize);
+    console.log(textfamily);
+    // 设置颜色
+    ctx.fillStyle = $("#ImageText").css("color");
+    // 设置水平对齐方式
+    ctx.textAlign = "left";
+    // 设置垂直对齐方式
+    ctx.textBaseline = "middle";
+    ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width+15), (height)/2);
+
+    console.log((width-img.width-spanwidth));
+    console.log((height-spanheight)/2);
+
     // document.body.appendChild(canvas);
     var imgdata=canvas.toDataURL();
     var date=new Date();
@@ -202,4 +229,20 @@ function ChangeItem(){
     var height=$("#ChangeType").find("option:selected").attr("data-height");
     $("#Imageid").height(height);
     $("#bgheight").val(height);
+}
+//设置字体内容
+function ChangeTextContent(){
+    var textcontent=$("#TextContent").val();
+    $("#ImageText").text(textcontent);
+}
+//设置字体大小
+function ChangeTextSize(){
+    var textsize=$("#TextSize").val();
+    // console.log(textsize);
+    $("#ImageText").css("font-size", textsize + "px");
+}
+//设置字体颜色
+function ChangeTextColor(){
+    var textcolor=$("#TextColor").val();
+    $("#ImageText").css("color",textcolor);
 }

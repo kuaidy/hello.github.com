@@ -15,8 +15,10 @@
 </head>
 <body>
     <div id="main">
+        <!-- 背景图设置 -->
         <div id="GenerateImage">
             <div id=header>BGIMAGE BETA</div>
+            <hr />
             <div id="setwidth" class="setting">
                 <span>背景宽度</span>
                 <input type="text" placeholder="auto" id="bgwidth" class="FormControl"></input>
@@ -29,8 +31,9 @@
                 <span>背景色</span>
                 <input type="color" id="bgcolor" class="FormControl">
             </div>
+            <hr />
             <div id="setbgimg" class="setting">
-                <span>图标</span>
+                <span>网络图片</span>
                 <input type="text" placeholder="请输入图标链接地址" id="bgicon" class="FormControl">
             </div>
             <div id="setIcon" class="setting">
@@ -44,25 +47,33 @@
                 <span>图标高度</span>
                 <input type="text" placeholder="auto" id="bgiconheight" class="FormControl">
             </div>
-            <!-- <div id="setText" class="setting">
+            <hr />
+            <div id="setTextContent" class="setting">
                 <span>文字内容</span>
-                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+                <input type="text" placeholder="请输入内容" id="TextContent" class="FormControl">
             </div>
-            <div id="setText" class="setting">
+            <div id="setTextSize" class="setting">
                 <span>文字大小</span>
-                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+                <input type="number" id="TextSize" class="FormControl" value="15">
             </div>
-            <div id="setText" class="setting">
+            <!-- <div id="setTextType" class="setting">
                 <span>文字类型</span>
-                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
-            </div>
-            <div id="setText" class="setting">
-                <span>文字颜色</span>
-                <input type="text" placeholder="请输入内容" id="bgiconheight" class="FormControl">
+                <select name="" id="Texttype">
+                        <option value="" data-width="750" data-height="375">网易大图模式</option>
+                        <option value="" data-width="710" data-height="354">少数派</option>
+                        <option value="" data-width="200" data-height="96">大鱼号封面</option>
+                        <option value="" data-width="360" data-height="270">企鹅号</option>
+                        <option value="" data-width="660" data-height="370">百家号</option>
+                    </select>
             </div> -->
+            <div id="setTextColor" class="setting">
+                <span>文字颜色</span>
+                <input type="color" id="TextColor" class="FormControl">
+            </div>
             <!-- <div id="setbgimg" class="setting">
                 <input type="checkbox" value="图标平铺">图标平铺</input>
             </div> -->
+            <hr />
             <div id="setbgtype" class="setting">
                 <span>平台选择</span>
                 <select name="" id="ChangeType">
@@ -71,6 +82,7 @@
                     <option value="" data-width="710" data-height="354">少数派</option>
                     <option value="" data-width="200" data-height="96">大鱼号封面</option>
                     <option value="" data-width="360" data-height="270">企鹅号</option>
+                    <option value="" data-width="660" data-height="370">百家号</option>
                 </select>
             </div>
             <div id="OptionItems" class="setting">
@@ -84,6 +96,7 @@
                 <span>V 2.0.0</span>
             </div>
         </div>
+        <!-- 背景图预览 -->
         <div id="ImageShow">
             <div id="Imageid" class="ImageItem">
                 <img id="ImageBgicon" src="" alt="" crossorigin>
@@ -95,10 +108,10 @@
     
 </body>
 <script>
-    //随机背景色
-    $("#Generate").click(function(){
-        GenerateColor();
-    });
+    // //随机背景色
+    // $("#Generate").click(function(){
+    //     GenerateColor();
+    // });
     //改变宽度
     $("#bgwidth").keyup(function(){
         var width=$("#bgwidth").val();
@@ -131,6 +144,19 @@
     $("#bgiconheight").change(function(){
         ChangeIconHeight();
     });
+    //字体内容设置
+    $("#TextContent").change(function(){
+        ChangeTextContent();
+    });
+    //字体大小
+    $("#TextSize").change(function(){
+        ChangeTextSize();
+    });
+    //字体颜色
+    $("#TextColor").change(function(){
+        ChangeTextColor();
+    });
+
     //下载
     $("#download").click(function(){
         var bgicon=$("#bgicon").val();

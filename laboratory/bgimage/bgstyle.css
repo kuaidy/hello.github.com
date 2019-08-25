@@ -25,10 +25,11 @@ div#header {
     /* height: 100px; */
     /* align-items: center; */
     /* flex-direction: column; */
-    width: 20%;
+    width: 22%;
     height: 100%;
     padding: 0px 10px;
     border-right: 1px solid #ccc;
+    overflow:auto;
 }
 div#ImageShow {
     margin: 50px 0px;
@@ -121,4 +122,10 @@ select#ChangeType {
     /* text-align: center; */
     height: 2.0em;
     border-radius: .25rem;
+}
+
+
+span#ImageText {
+    font-size: 16px;
+    /* margin-left: 15px; */
 }
