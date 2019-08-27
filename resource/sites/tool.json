@@ -73,6 +73,10 @@
 		{
 			"name":"微词云",
 			"siteurl":"https://zh-cn.minitagcloud.com/"
+		},
+		{
+			"name":"轻文档",
+			"siteurl":"http://qingwendang.com/"
 		}
 	]
 }

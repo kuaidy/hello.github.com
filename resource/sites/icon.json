@@ -1,0 +1,18 @@
+{
+	"error":false,
+	"site":[
+		{
+			"name":"easyicon",
+			"siteurl":"https://www.easyicon.net/"
+		},
+		{
+			"name":"iconfont",
+			"siteurl":"https://www.iconfont.cn/",
+			"status":"hot"
+		},
+		{
+			"name":"fontawesome",
+			"siteurl":"http://fontawesome.dashgame.com/"
+		}
+	]
+}
