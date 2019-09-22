@@ -9,7 +9,7 @@
         
     </style>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
     <link rel="stylesheet" href="./bgstyle.css">
     <script src="./backimage.js"></script>
 </head>
@@ -30,6 +30,9 @@
             <div id="setbgcolor" class="setting">
                 <span>背景色</span>
                 <input type="color" id="bgcolor" class="FormControl">
+            </div>
+            <div id="SelectColor" class="setting">
+                <button>配色推荐</button>
             </div>
             <hr />
             <div id="setbgimg" class="setting">
@@ -107,14 +110,17 @@
             </div>
         </div>
         <!-- <div id="ImageDown"></div> -->
+
+        <div id="graybackground">
+        </div>
+
+        <div id="iconurl"></div>
+
+        <div id="colorurl"></div>
     </div>
     
 </body>
 <script>
-    // //随机背景色
-    // $("#Generate").click(function(){
-    //     GenerateColor();
-    // });
     //改变宽度
     $("#bgwidth").keyup(function(){
         var width=$("#bgwidth").val();
@@ -174,6 +180,18 @@
         ChangeItem();
     });
 
+    $('#iconurl').load('selecticon.html');
+
+    $('#colorurl').load('selectcolor.html');
+
+    //图标推荐
+    $("#SelectIcon").click(function(){
+        ShowIcon();
+    });
+    //颜色推荐
+    $("#SelectColor").click(function(){
+        ShowColor();
+    });
 </script>
 
 

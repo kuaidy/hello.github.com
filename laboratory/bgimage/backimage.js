@@ -246,3 +246,25 @@ function ChangeTextColor(){
     var textcolor=$("#TextColor").val();
     $("#ImageText").css("color",textcolor);
 }
+
+//图标推荐
+function ShowIcon(){
+    $("#graybackground").css("display","flex");
+    $("#iconurl").css("display","flex");
+}
+//颜色推荐
+function ShowColor(){
+    $("#graybackground").css("display","flex");
+    $("#colorurl").css("display","flex");
+}
+//关闭图标推荐
+function CloseIcon(){
+    $("#graybackground").css("display","none");
+    $("#iconurl").css("display","none");
+    $("#colorurl").css("display","none");
+}
+//关闭颜色推荐
+function CloseColor(){
+    $("#graybackground").css("display","none");
+    $("#colorurl").css("display","none");
+}

@@ -129,3 +129,94 @@ span#ImageText {
     font-size: 16px;
     /* margin-left: 15px; */
 }
+
+#graybackground {
+    display:none;
+    background-color: #bbb;
+    opacity: 0.8;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#iconurl {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+}
+#colorurl{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+}
+
+/* 图标推荐 */
+div#IconForm {
+    padding: 15px;
+    max-width: 750px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+}
+
+div#FormTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+div#IconCondition {
+    display: flex;
+    padding: 1.5rem;
+}
+.item-ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.item-left img {
+    width: 50px;
+    height: 50px;
+}
+.item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.item-a {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    text-decoration-style: -moz-none;
+    color: black;
+}
+.item-li {
+    width: 45.5%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 1%;
+    padding: 1%;
+}
+
+.close{
+    border: 0px;
+    background-color: #fff;
+}
+/* 颜色推荐 */
+div#ColorForm {
+    padding: 15px;
+    max-width: 750px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+}

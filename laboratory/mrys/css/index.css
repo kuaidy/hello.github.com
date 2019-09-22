@@ -1,0 +1,64 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+html,body,#main,#content{
+	height:100%;
+}
+
+div#content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+	justify-content:center;
+	background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567439505925&di=7b2ad976c8941628c31b1cce500d2abe&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201509%2F26%2F20150926115749_NSfmR.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment:fixed;
+	font-size:23px;
+	font-family: cursive;
+    font-weight: bold;
+}
+p{
+	height:40px;
+	display:flex;
+	justify-content:center;
+	justify-content:center;
+}
+
+
+ul#optionlist {
+	position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    list-style: none;
+	justify-content: flex-end;
+}
+
+
+li {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+li#opmusic {
+    background-image: url("../icon/play.png");
+}
+li#oprandom {
+    background-image: url("../icon/random.png");
+}
+li#oppre {
+    background-image: url("../icon/left.png");
+}
+li#opnext {
+    background-image: url("../icon/right.png");
+}
+li#info {
+    background-image: url("../icon/info.png");
+}
+#option{
+	
+}
