@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>baimage</title>
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="plugs/clopik/colpick.css">
+    <script src="plugs/clopik/colpick.js"></script>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="../../js/jquery.min.js"></script>
     <link rel="stylesheet" href="./bgstyle.css">
@@ -30,6 +29,7 @@
             <div id="setbgcolor" class="setting">
                 <span>背景色</span>
                 <input type="color" id="bgcolor" class="FormControl">
+                <!-- <button id="colorpicker">Show Color Picker</button> -->
             </div>
             <div id="SelectColor" class="setting">
                 <button>配色推荐</button>
@@ -192,6 +192,9 @@
     $("#SelectColor").click(function(){
         ShowColor();
     });
+
+    // $('#colorpicker').colpick();
+
 </script>
 
 

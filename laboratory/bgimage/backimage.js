@@ -170,7 +170,7 @@ function DownLoad(){
     ctx.textAlign = "left";
     // 设置垂直对齐方式
     ctx.textBaseline = "middle";
-    ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width+15), (height)/2);
+    ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
 
     console.log((width-img.width-spanwidth));
     console.log((height-spanheight)/2);
@@ -268,3 +268,5 @@ function CloseColor(){
     $("#graybackground").css("display","none");
     $("#colorurl").css("display","none");
 }
+
+
