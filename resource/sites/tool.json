@@ -81,6 +81,10 @@
 		{
 			"name":"文叔叔",
 			"siteurl":"https://www.wenshushu.cn/"
+		},
+		{
+			"name":"HIPC",
+			"siteurl":"https://hipc.cn/"
 		}
 	]
 }
