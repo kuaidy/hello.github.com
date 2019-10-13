@@ -221,8 +221,8 @@ function GetDate(){
 //首页轮播 广告
 function ChangeHotProject()
 {
-	var adimage=["http://www.rdonly.com/wp-content/uploads/2019/06/RaspberryPi.png","http://www.rdonly.com/wp-content/uploads/2019/06/Digitalychee.png","http://www.rdonly.com/wp-content/uploads/2019/09/2019-9-3-1567522044374.png"];
-	var adurl=["https://s.click.taobao.com/MpjRk6w","https://s.click.taobao.com/wo5Pk6w","https://adguard.com/?aid=29835"];
+	var adimage=["http://www.rdonly.com/wp-content/uploads/2019/10/appfuns.png"];
+	var adurl=["#"];
 	var i=0;
 	setInterval(function(){
 		console.log(adurl.length);
