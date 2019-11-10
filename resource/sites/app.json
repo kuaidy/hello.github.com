@@ -24,11 +24,6 @@
 			"status":"hot"
 		},
 		{
-			"name":"NEXT",
-			"siteurl":"http://next.36kr.com/posts",
-			"status":"hot"
-		},
-		{
 			"name":"小众软件",
 			"siteurl":"http://www.appinn.com/",
 			"status":"hot"
@@ -44,10 +39,6 @@
 		{
 			"name":"便携软件",
 			"siteurl":"http://www.portablesoft.org/"
-		},
-		{
-			"name":"doubisoft",
-			"siteurl":"https://softs.fun/"
 		},
 		{
 			"name":"玩儿法",

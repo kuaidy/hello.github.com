@@ -14,22 +14,6 @@
 			"siteurl":"http://www.pediy.com/"
 		},
 		{
-			"name":"实验吧",
-			"siteurl":"https://www.shiyanbar.com/"
-		},
-		{
-			"name":"危险漫步",
-			"siteurl":"http://www.weixianmanbu.com/"
-		},
-		{
-			"name":"yehg",
-			"siteurl":"http://yehg.net/hwd/?id=r"
-		},
-		{
-			"name":"渗透资源",
-			"siteurl":"http://buildinger.lofter.com/post/1d6d69bd_9433028"
-		},
-		{
 			"name":"sec-wiki",
 			"siteurl":"https://www.sec-wiki.com/index.php"
 		},
@@ -41,10 +25,6 @@
 			"name":"Awesome",
 			"siteurl":"https://github.com/Hack-with-Github/Awesome-Hacking",
 			"status":"hot"
-		},
-		{
-			"name":"SRCSEC",
-			"siteurl":"http://www.srcsec.com/"
 		}
 	]
 }		

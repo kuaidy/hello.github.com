@@ -33,18 +33,6 @@
 		    "siteurl":"http://www.yinfans.com/"
 		},
 		{
-		    "name":"不太灵",
-		    "siteurl":"http://bt0.com/"
-		},
-		{
-		    "name":"艾米电影网",
-		    "siteurl":"http://www.i1080.cn/"
-		},
-		{
-			"name":"拉里拉里",
-			"siteurl":"http://www.lalilali.com/"
-		},
-		{
 			"name":"mvcat",
 			"siteurl":"http://www.mvcat.com/"
 		},
@@ -61,20 +49,12 @@
 			"siteurl":"https://www.yunbtv.com/"
 		},
 		{
-			"name":"嗨哆咪影视",
-			"siteurl":"http://haiduomi.com/"
-		},
-		{
 			"name":"TopBook",
 			"siteurl":"http://topbook.cc/"
 		},
 		{
 			"name":"蜗牛视频",
 			"siteurl":"https://snailok.com/"
-		},
-		{
-			"name":"高清MP4吧",
-			"siteurl":"http://www.mp4ba.com/"
 		}
 	]
 }

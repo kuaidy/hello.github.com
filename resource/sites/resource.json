@@ -2,17 +2,8 @@
 	"error":false,
 	"site":[
 		{
-			"name":"磁力猫",
-			"siteurl":"https://www.cilimao.me/"
-		},
-		{
 			"name":"胖次搜索",
 			"siteurl":"https://www.panc.cc/",
-			"status":"hot"
-		},
-		{
-			"name":"西林街",
-			"siteurl":"http://www.xilinjie.com/",
 			"status":"hot"
 		},
 		{
@@ -26,7 +17,7 @@
 		},
 		{
 			"name":"虫部落搜索",
-			"siteurl":"http://search.chongbuluo.com/"
+			"siteurl":"https://search.chongbuluo.com/"
 		},
 		{
 			"name":"茶杯狐",
@@ -37,20 +28,8 @@
 			"siteurl":"http://www.pansou.com/"
 		},
 		{
-			"name":"鸵鸟搜索",
-			"siteurl":"http://www.tuoniao.me/"
-		},
-		{
-			"name":"谷歌镜像",
-			"siteurl":"https://b.guge.ga/"
-		},
-		{
 			"name":"爱给网",
 			"siteurl":"http://www.aigei.com/"
-		},
-		{
-			"name":"磁力柠檬",
-			"siteurl":"https://lemoncili.com/"
 		}
 	]
 }

@@ -20,14 +20,6 @@
 			"status":"hot"
 		},
 		{
-			"name":"喵搜",
-			"siteurl":"https://nyaso.com/"
-		},
-		{
-			"name":"萌导航",
-			"siteurl":"http://www.moe123.com/"
-		},
-		{
 			"name":"动漫FM",
 			"siteurl":"http://www.dongman.fm/"
 		},
@@ -42,26 +34,6 @@
 		{
 			"name":"萌娘百科",
 			"siteurl":"https://zh.moegirl.org/Mainpage"
-		},
-		{
-			"name":"动漫花园",
-			"siteurl":"https://share.dmhy.org/"
-		},
-		{
-			"name":"蜜柑计划",
-			"siteurl":"http://mikanani.me/"
-		},
-		{
-			"name":"动漫下载",
-			"siteurl":"http://dl3.anime.nico.click/"
-		},
-		{
-			"name":"嘀哩嘀哩",
-			"siteurl":"https://www.bimibimi.cc/"
-		},
-		{
-			"name":"Nyaa",
-			"siteurl":"https://nyaa.si/"
 		}
 	]
 }
