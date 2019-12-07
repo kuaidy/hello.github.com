@@ -9,8 +9,8 @@
     <script src="plugs/clopik/colpick.js"></script>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="../../js/jquery.min.js"></script>
-    <link rel="stylesheet" href="./bgstyle.css">
-    <script src="./backimage.js"></script>
+    <link rel="stylesheet" href="bgstyle.css">
+    <script src="backimage.js" type="text/javascript"></script>
 </head>
 <body>
     <div id="main">
@@ -70,7 +70,7 @@
                         <option value="" data-width="200" data-height="96">大鱼号封面</option>
                         <option value="" data-width="360" data-height="270">企鹅号</option>
                         <option value="" data-width="660" data-height="370">百家号</option>
-                    </select>
+                </select>
             </div> -->
             <div id="setTextColor" class="setting">
                 <span>文字颜色</span>
@@ -79,6 +79,24 @@
             <!-- <div id="setbgimg" class="setting">
                 <input type="checkbox" value="图标平铺">图标平铺</input>
             </div> -->
+            <hr />
+            <!-- 图片添加阴影效果 -->
+            <div id="ShadowX" class="setting">
+                <span>X轴偏移</span>
+                <input type="number" id="SetShadowX" class="FormControl">
+            </div>
+            <div id="ShadowY" class="setting">
+                <span>Y轴偏移</span>
+                <input type="number" id="SetShadowY" class="FormControl">
+            </div>
+            <div id="ShadowSize" class="setting">
+                <span>模糊尺寸</span>
+                <input type="number" id="SetShadowSize" class="FormControl">
+            </div>
+            <div id="ShadowColor" class="setting">
+                <span>阴影颜色</span>
+                <input type="color" id="SetShadowColor" class="FormControl">
+            </div>
             <hr />
             <div id="setbgtype" class="setting">
                 <span>平台选择</span>
@@ -120,82 +138,4 @@
     </div>
     
 </body>
-<script>
-    //改变宽度
-    $("#bgwidth").keyup(function(){
-        var width=$("#bgwidth").val();
-        ChangeWidth(width);
-    });
-    //改变高度
-    $("#bgheight").keyup(function(){
-        var height=$("#bgheight").val();
-        ChangeHeight(height);
-    });
-    //改变背景色
-    $("#bgcolor").change(function(){
-        var bgcolor=$("#bgcolor").val();
-        ChangeColor(bgcolor);
-    });
-    //网络图标
-    $("#bgicon").change(function(){
-        var bgicon=$("#bgicon").val();
-        ChangeIcon(bgicon);
-    });
-    //本地图标
-    $("#localbgicon").change(function(e){
-        ChangeLocalIcon(e);
-    });
-    //图标宽度
-    $("#bgiconwidth").change(function(){
-        ChangeIconWidth();
-    });
-    //图标宽度
-    $("#bgiconheight").change(function(){
-        ChangeIconHeight();
-    });
-    //字体内容设置
-    $("#TextContent").change(function(){
-        ChangeTextContent();
-    });
-    //字体大小
-    $("#TextSize").change(function(){
-        ChangeTextSize();
-    });
-    //字体颜色
-    $("#TextColor").change(function(){
-        ChangeTextColor();
-    });
-
-    //下载
-    $("#download").click(function(){
-        var bgicon=$("#bgicon").val();
-        DownLoad(bgicon);
-    });
-    //重制
-    $("#reset").click(function(){
-        Reset();
-    });
-    //下拉框选择事件
-    $("#ChangeType").change(function(){
-        ChangeItem();
-    });
-
-    $('#iconurl').load('selecticon.html');
-
-    $('#colorurl').load('selectcolor.html');
-
-    //图标推荐
-    $("#SelectIcon").click(function(){
-        ShowIcon();
-    });
-    //颜色推荐
-    $("#SelectColor").click(function(){
-        ShowColor();
-    });
-
-    // $('#colorpicker').colpick();
-
-</script>
-
-
 </html>

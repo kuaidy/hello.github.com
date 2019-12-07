@@ -1,3 +1,91 @@
+$(function(){
+    //改变宽度
+    $("#bgwidth").keyup(function(){
+        var width=$("#bgwidth").val();
+        ChangeWidth(width);
+    });
+    //改变高度
+    $("#bgheight").keyup(function(){
+        var height=$("#bgheight").val();
+        ChangeHeight(height);
+    });
+    //改变背景色
+    $("#bgcolor").change(function(){
+        var bgcolor=$("#bgcolor").val();
+        ChangeColor(bgcolor);
+    });
+    //网络图标
+    $("#bgicon").change(function(){
+        var bgicon=$("#bgicon").val();
+        ChangeIcon(bgicon);
+    });
+    //本地图标
+    $("#localbgicon").change(function(e){
+        ChangeLocalIcon(e);
+    });
+    //图标宽度
+    $("#bgiconwidth").change(function(){
+        ChangeIconWidth();
+    });
+    //图标宽度
+    $("#bgiconheight").change(function(){
+        ChangeIconHeight();
+    });
+    //字体内容设置
+    $("#TextContent").change(function(){
+        ChangeTextContent();
+    });
+    //字体大小
+    $("#TextSize").change(function(){
+        ChangeTextSize();
+    });
+    //字体颜色
+    $("#TextColor").change(function(){
+        ChangeTextColor();
+    });
+
+    //下载
+    $("#download").click(function(){
+        var bgicon=$("#bgicon").val();
+        DownLoad(bgicon);
+    });
+    //重制
+    $("#reset").click(function(){
+        Reset();
+    });
+    //下拉框选择事件
+    $("#ChangeType").change(function(){
+        ChangeItem();
+    });
+
+    $('#iconurl').load('selecticon.html');
+
+    $('#colorurl').load('selectcolor.html');
+
+    //图标推荐
+    $("#SelectIcon").click(function(){
+        ShowIcon();
+    });
+    //颜色推荐
+    $("#SelectColor").click(function(){
+        ShowColor();
+    });
+
+    //设置阴影
+    $("#SetShadowX").change(function(){
+        SetPicShadow();
+    });
+    $("#SetShadowY").change(function(){
+        SetPicShadow();
+    });
+    $("#SetShadowSize").change(function(){
+        SetPicShadow();
+    });
+    $("#SetShadowColor").change(function(){
+        SetPicShadow();
+    });
+});
+
 function GenerateColor(){
     //背景颜色随机
     var x=Math.floor((Math.random()*100+1));
@@ -149,21 +237,30 @@ function DownLoad(){
     canvas.height = height;
     canvas.style.zIndex = 8;
     var ctx=canvas.getContext("2d");
+
+    //设置阴影
+    var shadowx=$("#SetShadowX").val();
+    var shadowy=$("#SetShadowY").val();
+    var shadowsize=$("#SetShadowSize").val();
+    var shadowcolor=$("#SetShadowColor").val();
+
+    ctx.shadowOffsetX = shadowx; // 阴影Y轴偏移
+    ctx.shadowOffsetY = shadowy; // 阴影X轴偏移
+    ctx.shadowBlur = shadowsize; // 模糊尺寸
+    ctx.shadowColor = shadowcolor; // 颜色
+    var recaddsize=Math.max(shadowx,shadowy,shadowsize);
+    //console.log(recaddsize);
+    
     ctx.fillStyle=bgcolor;
-    ctx.fillRect(0,0,width,height);
+    ctx.fillRect(0,0,width-recaddsize,height-recaddsize);
     ctx.drawImage(img,(width-img.width-spanwidth)/2,(height-img.height)/2,img.width,img.height);
 
-    
-    //获取文字
+    //设置文字
     var textcontent=$("#ImageText").text();
     var textsize=$("#ImageText").css("font-size");
     var textfamily=$("#ImageText").css("font-family");
     // 设置字体
     ctx.font = textsize+" "+textfamily;
-    console.log(spanwidth);
-    console.log(spanheight);
-    console.log(textsize);
-    console.log(textfamily);
     // 设置颜色
     ctx.fillStyle = $("#ImageText").css("color");
     // 设置水平对齐方式
@@ -172,8 +269,10 @@ function DownLoad(){
     ctx.textBaseline = "middle";
     ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
 
-    console.log((width-img.width-spanwidth));
-    console.log((height-spanheight)/2);
+
+
+    //console.log((width-img.width-spanwidth));
+    //console.log((height-spanheight)/2);
 
     // document.body.appendChild(canvas);
     var imgdata=canvas.toDataURL();
@@ -268,5 +367,22 @@ function CloseColor(){
     $("#graybackground").css("display","none");
     $("#colorurl").css("display","none");
 }
+
+//设置背景阴影
+function SetPicShadow(){
+    var shadowx=0;
+    shadowx=$("#SetShadowX").val();
+    var shadowy=0;
+    shadowy=$("#SetShadowY").val();
+    var shadowsize=0;
+    shadowsize=$("#SetShadowSize").val();
+    var shadowcolor=$("#SetShadowColor").val();
+    console.log(shadowx);
+    $("#Imageid").css("box-shadow", shadowx + "px" +" "+shadowy+"px"+" "+shadowsize+"px"+" "+shadowcolor);
+}
+
+
+
+
 
 
