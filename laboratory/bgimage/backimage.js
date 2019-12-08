@@ -231,28 +231,29 @@ function DownLoad(){
         }
     }
 
-    var canvas = document.createElement('canvas');
-    canvas.id = "BackCanvas";
-    canvas.width = width;
-    canvas.height = height;
-    canvas.style.zIndex = 8;
-    var ctx=canvas.getContext("2d");
-
     //设置阴影
     var shadowx=$("#SetShadowX").val();
     var shadowy=$("#SetShadowY").val();
     var shadowsize=$("#SetShadowSize").val();
     var shadowcolor=$("#SetShadowColor").val();
+    var recaddsize=Math.max(shadowx,shadowy,shadowsize);
+
+    var canvas = document.createElement('canvas');
+    canvas.id = "BackCanvas";
+    canvas.width = width+2*recaddsize;
+    canvas.height = height+2*recaddsize;
+    canvas.style.zIndex = 8;
+    var ctx=canvas.getContext("2d");
 
     ctx.shadowOffsetX = shadowx; // 阴影Y轴偏移
     ctx.shadowOffsetY = shadowy; // 阴影X轴偏移
     ctx.shadowBlur = shadowsize; // 模糊尺寸
     ctx.shadowColor = shadowcolor; // 颜色
-    var recaddsize=Math.max(shadowx,shadowy,shadowsize);
+    
     //console.log(recaddsize);
     
     ctx.fillStyle=bgcolor;
-    ctx.fillRect(0,0,width-recaddsize,height-recaddsize);
+    ctx.fillRect(0+recaddsize,0+recaddsize,width,height);
     ctx.drawImage(img,(width-img.width-spanwidth)/2,(height-img.height)/2,img.width,img.height);
 
     //设置文字
