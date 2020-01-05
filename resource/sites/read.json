@@ -55,6 +55,10 @@
 		{
 			"name":"ReadHub",
 			"siteurl":"https://readhub.cn/"
+		},
+		{
+			"name":"小专栏",
+			"siteurl":"https://xiaozhuanlan.com/"
 		}
 
 	]

@@ -69,6 +69,10 @@
 		{
 			"name":"正版中国",
 			"siteurl":"https://getitfree.cn/"
+		},
+		{
+			"name":"producthunt",
+			"siteurl":"https://www.producthunt.com/"
 		}
 	]
 }

@@ -25,6 +25,10 @@
 			"name":"Awesome",
 			"siteurl":"https://github.com/Hack-with-Github/Awesome-Hacking",
 			"status":"hot"
+		},
+		{
+			"name":"paper",
+			"siteurl":"https://paper.seebug.org/"
 		}
 	]
 }		
