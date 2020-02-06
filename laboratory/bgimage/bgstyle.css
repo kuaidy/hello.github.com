@@ -92,9 +92,6 @@ div#ImageDown {
     border-radius: .25rem;
     border: 1px solid #ccc;
 }
-#localbgicon{
-
-}
 
 button.Option {
     width: 49%;
@@ -102,6 +99,7 @@ button.Option {
     padding: 5px;
     color: #fff;
     border-radius: 0.25em;
+    background-color: #2c7be5;
 }
 
 button#download {
@@ -219,4 +217,10 @@ div#ColorForm {
     margin: auto;
     margin-top: 50px;
     background-color: #fff;
+}
+
+/* 获取主题色 */
+div#ImageIconColor{
+    width: 100px;
+    overflow: auto;
 }

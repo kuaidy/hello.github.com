@@ -84,6 +84,15 @@ $(function(){
     $("#SetShadowColor").change(function(){
         SetPicShadow();
     });
+    //获取图标主题颜色
+    $("#GetMainColor").click(function(){
+        var ImageIconColor=document.getElementById("ImageIconColor");
+        var childs = ImageIconColor.childNodes; 
+        for(var i = childs .length - 1; i >= 0; i--) {
+            ImageIconColor.removeChild(childs[i]);
+        }
+        GetRgbData();
+    });
 });
 
 function GenerateColor(){
@@ -382,8 +391,123 @@ function SetPicShadow(){
     $("#Imageid").css("box-shadow", shadowx + "px" +" "+shadowy+"px"+" "+shadowsize+"px"+" "+shadowcolor);
 }
 
+//获取图片数据
+function GetRgbData(){
+    var imgicon=document.getElementById("ImageBgicon");
+    var image=new Image();
+    image.src=imgicon.src;
+    var canvas=document.createElement("canvas");
+    canvas.width = imgicon.width;
+    canvas.height = imgicon.height;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(imgicon,0,0);
+    var data = ctx.getImageData(0, 0,image.width,image.height).data;//读取整张图片的像素。
 
+    var rgbArray=new Array();
+    for(var i=0;i<data.length;i+=4){
+        var rdata=data[i]; //240-250
+        var gdata=data[i+1]; //70-100
+        var bdata=data[i+2];//80-120
+        var adata=data[i+3];
+        if(adata>125){
+            rgbArray.push([rdata,gdata,bdata,adata]);
+        }
+        
+    }
+    console.log(rgbArray);
+    GetColor(rgbArray);
+}
 
+//获取图片主题色
+function GetColor(cube){
+    var qulity=100;
+    var divcolorsize="50px";
+    var maxr=cube[0][0],minr=cube[0][0],maxg=cube[0][1],ming=cube[0][1],maxb=cube[0][2],minb=cube[0][2];
+    for(var i=0;i<cube.length;i++)
+    {
+        if(cube[i][0]>maxr){
+            maxr=cube[i][0];
+        }
+        if(cube[i][0]<minr){
+            minr=cube[i][0];
+        }
+        if(cube[i][1]>maxg){
+            maxg=cube[i][1];
+        }
+        if(cube[i][1]<ming){
+            ming=cube[i][1];
+        }
+        if(cube[i][2]>maxb){
+            maxb=cube[i][2];
+        }
+        if(cube[i][2]<minb){
+            minb=cube[i][2];
+        }
+    }
+
+    if((maxr-minr)<qulity&&(maxg-ming)<qulity&&(maxb-minb)<qulity){
+        var r=0,g=0,b=0;
+        for(var i=0;i<cube.length;i++){
+            r+=cube[i][0];
+            g+=cube[i][1];
+            b+=cube[i][2];
+        }
+        var divcolor=document.createElement("div");
+        var spancolor=document.createElement("span");
+        divcolor.style.backgroundColor="rgba("+r/(cube.length)+","+g/(cube.length)+","+b/(cube.length)+")";
+        divcolor.style.width=divcolorsize;
+        divcolor.style.height=divcolorsize;
+
+        var hex = "#" + ((1 << 24) + ((r/cube.length) << 16) + ((g/cube.length) << 8) +(b/cube.length)).toString(16).slice(1);
+        spancolor.innerHTML=hex.split('.')[0];
+        
+        var ImageIconColor=document.getElementById("ImageIconColor");
+        ImageIconColor.appendChild(divcolor);
+        ImageIconColor.appendChild(spancolor);
+    }else{
+        var maxrgb=0;
+        var rgbindex=0;
+        var rgbmiddle=0;
+
+        if((maxr-minr)>maxrgb)
+        {
+            maxrgb=(maxr-minr);
+            rgbmiddle=(maxr+minr)/2
+            rgbindex=0;
+        }
+        if((maxg-ming)>maxrgb)
+        {
+            maxrgb=(maxg-ming);
+            rgbmiddle=(maxg+ming)/2;
+            rgbindex=1;
+        }
+        if((maxb-minb)>maxrgb)
+        {
+            maxrgb=(maxb-minb);
+            rgbmiddle=(maxb+minb)/2;
+            rgbindex=2;
+        }
+        
+        //排序
+        cube.sort(function(x,y){
+            return x[rgbindex]-y[rgbindex];
+        });
+        var cubea=new Array();
+        var cubeb=new Array();
+        for(var i=0;i<cube.length;i++){
+            if(cube[i][rgbindex]<rgbmiddle){
+                cubea.push(cube[i]);
+            }else{
+                cubeb.push(cube[i]);
+            }
+        }
+    
+        GetColor(cubeb);
+        GetColor(cubea);
+    }
+        // 递归循环
+        // 按照最长边排序，每次先取像素密集的进行切割，符合条件则保存颜色的中位值
+}
 
 
 
