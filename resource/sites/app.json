@@ -73,6 +73,10 @@
 		{
 			"name":"producthunt",
 			"siteurl":"https://www.producthunt.com/"
+		},
+		{
+			"name":"创造者日报",
+			"siteurl":"https://creatorsdaily.com/"
 		}
 	]
 }
