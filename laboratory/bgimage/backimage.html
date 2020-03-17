@@ -35,10 +35,10 @@
                 <button class="Option">配色推荐</button>
             </div>
             <hr />
-            <div id="setbgimg" class="setting">
+            <!-- <div id="setbgimg" class="setting">
                 <span>网络图片</span>
                 <input type="text" placeholder="请输入图标链接地址" id="bgicon" class="FormControl">
-            </div>
+            </div> -->
             <div id="setIcon" class="setting">
                 <input type="file" accept="image/png, image/jpeg,image/jpg" id="localbgicon"></input>
             </div>
@@ -124,7 +124,8 @@
         <!-- 背景图预览 -->
         <div id="ImageShow">
             <div id="Imageid" class="ImageItem">
-                <img id="ImageBgicon" src="" alt="" crossorigin>
+                <img id="ImageBgicon" src="" alt="">
+                <h3 id="lb_note">在此处粘贴图标</h3>
                 <span id="ImageText"></span>
             </div>
         </div>
@@ -136,13 +137,52 @@
         
         <!-- <div id="ImageDown"></div> -->
 
-        <div id="graybackground">
+        <div id="graybackground" contentEditable>
         </div>
 
-        <div id="iconurl"></div>
+        <div id="iconurl" ></div>
 
         <div id="colorurl"></div>
     </div>
-    
+
 </body>
+
+<script >
+//复制粘贴图片
+document.addEventListener("paste", function (e) {
+    var cbd = e.clipboardData;
+    var ua = window.navigator.userAgent;
+    // 如果是 Safari 直接 return
+    if ( !(e.clipboardData && e.clipboardData.items) ) {
+        return;
+    }
+    // Mac平台下Chrome49版本以下 复制Finder中的文件的Bug Hack掉
+    if(cbd.items && cbd.items.length === 2 && cbd.items[0].kind === "string" && cbd.items[1].kind === "file" &&
+        cbd.types && cbd.types.length === 2 && cbd.types[0] === "text/plain" && cbd.types[1] === "Files" &&
+        ua.match(/Macintosh/i) && Number(ua.match(/Chrome\/(\d{2})/i)[1]) < 49){
+        return;
+    }
+
+    var blob;
+    for(var i = 0; i < cbd.items.length; i++) {
+        var item = cbd.items[i];
+        if(item.kind == "file"){
+            blob= item.getAsFile();
+            if (blob.size === 0) {
+                return;
+            }
+        }
+    }
+    
+    var reader=new FileReader();
+    // blob 就是从剪切板获得的文件 可以进行上传或其他操作
+    reader.readAsDataURL(blob);
+
+    reader.addEventListener("load", function () {
+        $('#ImageBgicon').attr("src", reader.result);
+        $("#lb_note").hide();
+    }, false);
+});
+</script>
+
 </html>

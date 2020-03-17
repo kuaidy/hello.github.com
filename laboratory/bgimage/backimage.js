@@ -17,11 +17,12 @@ $(function(){
     //网络图标
     $("#bgicon").change(function(){
         var bgicon=$("#bgicon").val();
-        ChangeIcon(bgicon);
+        DownLoadReportIMG(bgicon);
     });
     //本地图标
     $("#localbgicon").change(function(e){
         ChangeLocalIcon(e);
+        $("#lb_note").hide();
     });
     //图标宽度
     $("#bgiconwidth").change(function(){
@@ -196,6 +197,9 @@ function ChangeColor(bgcolor){
 //图标
 function ChangeIcon(bgicon){
     $('#ImageBgicon').attr("src", bgicon);
+    $.getJSON(bgicon,function(jsondata){
+        console.log(jsondata);
+    });
 }
 //改变图标宽度
 function ChangeIconWidth(){
@@ -304,6 +308,8 @@ function savaImage(data,filename)
     // var event=document.createEvent('MouseEvents');
     // event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
     // save_link.dispatchEvent(event);
+
+    
 };
 //上传图片
 function ChangeLocalIcon(e){
@@ -508,6 +514,30 @@ function GetColor(cube){
         // 递归循环
         // 按照最长边排序，每次先取像素密集的进行切割，符合条件则保存颜色的中位值
 }
+
+
+function DownLoadReportIMG(imgPathURL) {
+    //如果隐藏IFRAME不存在，则添加
+    if (!document.getElementById("IframeReportImg"))
+
+    $('<iframe style="display:none;" id="IframeReportImg" name="IframeReportImg" onload="DoSaveAsIMG();" width="0" height="0" src="about:blank"></iframe>').appendTo("body");
+
+    if (document.all.IframeReportImg.src != imgPathURL) {
+        //加载图片
+        document.all.IframeReportImg.src = imgPathURL;
+    }
+    else {
+        //图片直接另存为
+        DoSaveAsIMG();
+    }
+
+}
+
+function DoSaveAsIMG() {
+    // if (document.all.IframeReportImg.src != "about:blank")
+    document.execCommand("open");
+}
+
 
 
 
