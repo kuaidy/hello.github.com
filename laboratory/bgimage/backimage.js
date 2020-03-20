@@ -35,6 +35,7 @@ $(function(){
     //字体内容设置
     $("#TextContent").change(function(){
         ChangeTextContent();
+        $("#lb_note").hide();
     });
     //字体大小
     $("#TextSize").change(function(){
