@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>baimage</title>
-    <link rel="stylesheet" href="plugs/clopik/colpick.css">
-    <script src="plugs/clopik/colpick.js"></script>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="../../js/jquery.min.js"></script>
     <link rel="stylesheet" href="bgstyle.css">
     <script src="backimage.js" type="text/javascript"></script>
+    <script src="./plugs/minicolor/colorpicker.js"></script>
 </head>
 <body>
     <div id="main">
@@ -28,8 +27,11 @@
             </div>
             <div id="setbgcolor" class="setting">
                 <span>背景色</span>
-                <input type="color" id="bgcolor" class="FormControl">
+                <!-- <input type="color" id="bgcolor" class="FormControl"> -->
+                <!-- <input type="text" id="position-bottom-left" class="demo" data-position="bottom left" value="#0088cc"> -->
                 <!-- <button id="colorpicker">Show Color Picker</button> -->
+                <!-- <input id="cpFocus" value="#8db3e2" /> -->
+                <div class="picker" id="color-picker" class="FormControl" style="width:100px;height:30px;"></div>
             </div>
             <div id="SelectColor" class="setting">
                 <button class="Option">配色推荐</button>
@@ -183,6 +185,6 @@ document.addEventListener("paste", function (e) {
         $("#lb_note").hide();
     }, false);
 });
-</script>
 
+</script>
 </html>

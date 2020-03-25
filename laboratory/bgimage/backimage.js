@@ -9,11 +9,23 @@ $(function(){
         var height=$("#bgheight").val();
         ChangeHeight(height);
     });
+
     //改变背景色
     $("#bgcolor").change(function(){
         var bgcolor=$("#bgcolor").val();
         ChangeColor(bgcolor);
     });
+
+    //插件改变背景色
+    var a = Colorpicker.create({
+        el: "color-picker",
+        color: "#cccccc",
+        change: function (elem, hex) {
+            elem.style.backgroundColor = hex;
+            ChangeColor(hex);
+        }
+    })
+
     //网络图标
     $("#bgicon").change(function(){
         var bgicon=$("#bgicon").val();
