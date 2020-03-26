@@ -236,7 +236,7 @@ function ChangeIconHeight(iconheight){
 function DownLoad(){
     var width=$("#Imageid").width();
     var height=$("#Imageid").height();
-    var bgcolor=$("#bgcolor").val();
+    var bgcolor=$("#Imageid").css("background-color");
 
     //获取span的宽度
     var spanwidth=$("#ImageText").width();
