@@ -234,3 +234,19 @@ function ChangeHotProject()
 		i++;
 	},5000);
 }
+
+
+//更多网站
+//网站
+function GetMoreData(url){
+	$.getJSON(url,function(data){
+		var items1=[];
+
+		$.each(data,function(key,value){
+			items1.push('<li class="toolcontent_lis" data-id-name="'+key+'"><div class="toolitems"><div class="tooltitledesc"><div class="tooltitle"><a style="width:100%;" href="'+value.url+'">'+value.title+'</div></div></div></li>');
+		});
+		
+		$("#toolcontentul_flex").append(items1);
+
+	});
+}

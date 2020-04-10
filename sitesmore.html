@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="优秀网站，有趣网站，创意网站，网址导航，上网主页，网站分享">
+    <meta name="description" content="优秀网站，在线音乐，免费视频，设计，游戏，学习，阅读，资源搜索，导航">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base target="_blank">
+	<title>寻|让我们再简洁点</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/moresites.css">
+	<script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+	<div id="main">
+		<div id="header" class="outbox"><!--header-->
+			<div class="navinner">
+				<span id="span2"><a href="http://www.rdonly.com/">寻</a></span>
+				<span id="span3">
+					<ul id="nav">
+						<li><i>new</i><a href="./tooldown.html">软件下载</a></li>
+						<li><a target="_blank" href="https://shimo.im/docs/tAx0zmGUMLwPTdsq/ 「留言&闲聊」">留言</a></li>
+						<li id="moreinfo">
+							<a href="./included.html" title="随意分享一些东西">更多</a>
+							<!-- <ul id="moreinfo_tags">
+								<li class="moreinfo_tag"><a href="http://blog.rdonly.com/">博客</a></li>
+							</ul> -->
+						</li>
+						<li><a href="./update.html">关于</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
+
+		<div id=category class="toolmain">
+			<ul id="categoryul_flex">
+				<li class="tooltag" data-json-name="lead">导航</li>
+				<li class="tooltag" data-json-name="fun">有趣</li>
+				<li class="tooltag" data-json-name="community">社区</li>
+			</ul>
+		</div>
+
+		<div id="toolcontent" class="toolmain">
+			<ul id="toolcontentul_flex">
+<!-- 				<li class='toolcontent_lis'>
+					<div class="toolicon"><img src="http://appfuns.oss-cn-hongkong.aliyuncs.com/sublime.jpg" alt="" class="image_style"></div>
+					<div class="tooltitle">sublime text</div>
+					<div class="tooldescription">一款配色很骚的编辑器,支持多种语言以及vim</div>
+				</li>-->
+			</ul>
+		</div>
+
+	    <div id="footer" class="outbox">
+		    <center>
+		        <p>
+                    <!-- Hosted by <a href="https://pages.coding.me">Coding Pages</a>| -->
+                    感谢<a href="https://github.com/kuaidy/kuaidy.github.io"><strong>Github</strong></a>提供服务支持|
+	                <a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=wkwcdo5j"><strong>阿里云</strong></a>提供图片存储
+				</p>
+		    </center>
+		</div><!--footer-->	
+	</div>
+</body>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript">
+
+$("body").ready(function(){
+	var url="resource/more/lead.json";
+	GetMoreData(url);
+});
+
+$(".tooltag").click(function(){
+	$("#toolcontentul_flex").empty();
+	var resourcename=$(this).data("json-name");
+	var url="resource/more/"+resourcename+".json";
+	GetMoreData(url);
+});	
+</script>
+</html>

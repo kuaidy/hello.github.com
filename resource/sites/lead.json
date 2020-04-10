@@ -33,10 +33,6 @@
 			"status":"hot"
 		},
 		{
-			"name":"boke导航",
-			"siteurl":"http://boke112.com/"
-		},
-		{
 			"name":"饭团导航",
 			"siteurl":"http://hao.psefan.com/"
 		},
@@ -51,10 +47,6 @@
 		{
 			"name":"1纳米",
 			"siteurl":"http://1nami.com/"
-		},
-		{
-			"name":"千寻导航",
-			"siteurl":"https://dh.baidu.com/"
 		},
 		{
 			"name":"SeeSeed",
@@ -103,14 +95,6 @@
 		{
 			"name":"比格张",
 			"siteurl":"https://bigezhang.com/"
-		},
-		{
-			"name":"KIM",
-			"siteurl":"https://www.zhuye.kim/"
-		},
-		{
-			"name":"好玩好用",
-			"siteurl":"http://www.haoyonghaowan.com/"
 		}
 	]
 }
