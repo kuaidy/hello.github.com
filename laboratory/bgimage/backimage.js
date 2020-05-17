@@ -24,7 +24,45 @@ $(function(){
             elem.style.backgroundColor = hex;
             ChangeColor(hex);
         }
-    })
+    });
+
+    //传统色
+    $("#fenhong").click(function(){
+        var bgcolor=$("#fenhong").val();
+        ChangeColor(bgcolor);
+    });
+    $("#ehuang").click(function(){
+        var bgcolor=$("#ehuang").val();
+        ChangeColor(bgcolor);
+    });
+    $("#nenglv").click(function(){
+        var bgcolor=$("#nenglv").val();
+        ChangeColor(bgcolor);
+    });
+    $("#lan").click(function(){
+        var bgcolor=$("#lan").val();
+        ChangeColor(bgcolor);
+    });
+    $("#cang").click(function(){
+        var bgcolor=$("#cang").val();
+        ChangeColor(bgcolor);
+    });
+    $("#shui").click(function(){
+        var bgcolor=$("#shui").val();
+        ChangeColor(bgcolor);
+    });
+    $("#xiangyabai").click(function(){
+        var bgcolor=$("#xiangyabai").val();
+        ChangeColor(bgcolor);
+    });
+    $("#xuan").click(function(){
+        var bgcolor=$("#xuan").val();
+        ChangeColor(bgcolor);
+    });
+    $("#chijin").click(function(){
+        var bgcolor=$("#chijin").val();
+        ChangeColor(bgcolor);
+    });
 
     //网络图标
     $("#bgicon").change(function(){

@@ -42,6 +42,10 @@
 		{
 			"name":"zfrontier",
 			"siteurl":"https://www.zfrontier.com/"
+		},
+		{
+			"name":"独立开发者",
+			"siteurl":"https://indiehackers.net/"
 		}
 	]
 }
