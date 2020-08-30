@@ -36,7 +36,7 @@
             <div id="SelectColor" class="setting">
                 <button class="Option">配色推荐</button>
             </div>
-            <div>
+            <!-- <div>
                 <button id="fenhong" style="background-color:#ffb3a7;width:20px;height:20px;border:0px;" value="#ffb3a7"></button>
                 <button id="ehuang" style="background-color:#fff143;width:20px;height:20px;border:0px;" value="#fff143"></button>
                 <button id="nenglv" style="background-color:#bddd22;width:20px;height:20px;border:0px;" value="#bddd22"></button>
@@ -46,7 +46,11 @@
                 <button id="xiangyabai" style="background-color:#fffbf0;width:20px;height:20px;border:0px;" value="#fffbf0"></button>
                 <button id="xuan" style="background-color:#622a1d;width:20px;height:20px;border:0px;" value="#622a1d"></button>
                 <button id="chijin" style="background-color:#f2be45;width:20px;height:20px;border:0px;" value="#f2be45"></button>
+            </div> -->
+            <div id="setBackImg" class="setting">
+                <input type="file" accept="image/png, image/jpeg,image/jpg" id="localbgimg"></input>
             </div>
+
             <hr />
             <!-- <div id="setbgimg" class="setting">
                 <span>网络图片</span>
@@ -93,6 +97,15 @@
             <!-- <div id="setbgimg" class="setting">
                 <input type="checkbox" value="图标平铺">图标平铺</input>
             </div> -->
+            <hr />
+            <div id="setWaterMark" class="setting">
+                <span>水印文字</span>
+                <input type="text" placeholder="请输入内容" id="ip_WaterMarkText" class="FormControl">
+            </div>
+            <div id="useWaterMark" class="setting">
+                <span>使用水印</span>
+                <input type="checkbox" id="ip_UseWaterMark" class="FormControl">
+            </div>
             <hr />
             <!-- 图片添加阴影效果 -->
             <div id="ShadowX" class="setting">

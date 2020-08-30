@@ -45,6 +45,7 @@ div#ImageShow {
 #ImageBgicon{
     width: auto;
     height: auto;
+    z-index: 999;
 }
 #ImageClone{
     width: 400px;
@@ -125,6 +126,7 @@ select#ChangeType {
 
 span#ImageText {
     font-size: 16px;
+    z-index: 999;
     /* margin-left: 15px; */
 }
 

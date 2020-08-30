@@ -16,6 +16,31 @@ $(function(){
         ChangeColor(bgcolor);
     });
 
+    //添加背景图片
+    $("#localbgimg").change(function(e){
+        var reader=new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload=function(){
+            var imagedata=reader.result;
+            //console.log(imagedata);
+            $("#Imageid").css({"background-image":"url("+imagedata+")","background-repeat":"no-repeat"});
+        };
+    });
+    //拖动背景图片
+    $("#localbgimg").mousedown(function(e){
+        var startx=e.pageX;
+        var starty=e.pageY;
+        console.log(e);
+        console.log(y);
+
+        $("#localbgimg").mousemove(function(e){
+
+            //$("#Imageid").css({""});
+        })
+    });
+
+
+
     //插件改变背景色
     var a = Colorpicker.create({
         el: "color-picker",
@@ -144,6 +169,13 @@ $(function(){
             ImageIconColor.removeChild(childs[i]);
         }
         GetRgbData();
+    });
+
+    //使用水印
+    $("#ip_UseWaterMark").change(function(){
+        if(($("#ip_UseWaterMark").is(":checked"))){
+            SetWaterMark();
+        }
     });
 });
 
@@ -589,6 +621,20 @@ function DoSaveAsIMG() {
     document.execCommand("open");
 }
 
-
+//添加水印
+function SetWaterMark(){
+    var WaterMarkText=$("#ip_WaterMarkText").val();
+    console.log(WaterMarkText);
+    $("p").remove(".p_WaterMarkText");
+    for(var i=0;i<20;i++){
+        var left=i*20;
+        var top=i*0;
+        var pobj='<p class="p_WaterMarkText" z-index:10;">'+WaterMarkText+'</p>';
+        console.log(pobj)
+        
+        $("#Imageid").append(pobj);
+    }
+    
+}
 
 
