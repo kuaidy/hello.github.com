@@ -175,6 +175,8 @@ $(function(){
     $("#ip_UseWaterMark").change(function(){
         if(($("#ip_UseWaterMark").is(":checked"))){
             SetWaterMark();
+        }else{
+            $("div").remove(".div_WaterMarkText");
         }
     });
 });
@@ -367,7 +369,17 @@ function DownLoad(){
     ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
 
 
-
+    // 绘制水印
+    var WaterMarkText=$(".p_WaterMarkText").text();
+    var WaterMarkWith=$(".p_WaterMarkText").width()
+    var WaterMarkHeight=$(".p_WaterMarkText").height();
+    console.log(WaterMarkText);
+    console.log(WaterMarkHeight);
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    ctx.globalAlpha = 0.4;
+    ctx.fillText(WaterMarkText,width-WaterMarkWith-15, height-WaterMarkHeight);
+    
     //console.log((width-img.width-spanwidth));
     //console.log((height-spanheight)/2);
 
@@ -625,16 +637,16 @@ function DoSaveAsIMG() {
 function SetWaterMark(){
     var WaterMarkText=$("#ip_WaterMarkText").val();
     console.log(WaterMarkText);
-    $("p").remove(".p_WaterMarkText");
-    for(var i=0;i<20;i++){
-        var left=i*20;
-        var top=i*0;
-        var pobj='<p class="p_WaterMarkText" z-index:10;">'+WaterMarkText+'</p>';
-        console.log(pobj)
-        
-        $("#Imageid").append(pobj);
-    }
-    
+    $("#lb_note").hide();
+        var divobj=$('<div class="div_WaterMarkText"></div>');
+        //for(var i=0;i<80;i++){
+        //    var left=i*20;
+        //    var top=i*0;
+            var pobj='<p class="p_WaterMarkText" z-index:999;">'+WaterMarkText+'</p>';
+        //    console.log(pobj);
+            divobj.append(pobj);
+        //}
+        $("#Imageid").append(divobj);
 }
 
 

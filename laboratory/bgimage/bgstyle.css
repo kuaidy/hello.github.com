@@ -42,10 +42,18 @@ div#ImageShow {
     height: 100%;
     overflow: auto;
 }
+.div_ImgContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
 #ImageBgicon{
     width: auto;
     height: auto;
-    z-index: 999;
+    z-index: 99;
 }
 #ImageClone{
     width: 400px;
@@ -126,7 +134,7 @@ select#ChangeType {
 
 span#ImageText {
     font-size: 16px;
-    z-index: 999;
+    z-index: 99;
     /* margin-left: 15px; */
 }
 
@@ -226,3 +234,27 @@ div#ImageIconColor{
     width: 100px;
     overflow: auto;
 }
+
+/* 水印 */
+.div_WaterMarkText {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: flex-end;
+    z-index: 999;
+}
+.p_WaterMarkText {
+    /* transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg); */
+    /* margin: 20%; */
+    padding: 10px;
+    margin: 0px;
+    opacity: 0.3;
+}
+/* 水印 */
