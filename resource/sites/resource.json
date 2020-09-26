@@ -2,11 +2,6 @@
 	"error":false,
 	"site":[
 		{
-			"name":"胖次搜索",
-			"siteurl":"https://www.panc.cc/",
-			"status":"hot"
-		},
-		{
 			"name":"去转盘网",
 			"siteurl":"http://www.quzhuanpan.com/",
 			"status":"hot"

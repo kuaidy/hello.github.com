@@ -84,6 +84,10 @@
 		{
 			"name":"在线工具",
 			"siteurl":"https://tool.lu/"
+		},
+		{
+			"name":"docsmall",
+			"siteurl":"https://docsmall.com/"
 		}
 	]
 }

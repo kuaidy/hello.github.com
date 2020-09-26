@@ -28,6 +28,10 @@
 		{
 			"name":"搜狗号",
 			"siteurl":"http://mp.sogou.com/"
+		},
+		{
+			"name":"搜狐号",
+			"siteurl":"hhttps://mp.sohu.com/"
 		}
 	]
 }

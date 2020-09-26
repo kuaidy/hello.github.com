@@ -16,19 +16,6 @@
 			"siteurl":"http://www.zreading.cn/"
 		},
 		{
-			"name":"历史上的今天",
-			"siteurl":"http://www.todayonhistory.com/"
-		},
-		{
-			"name":"干货集中营",
-			"siteurl":"http://gank.io/xiandu",
-			"status":"hot"
-		},
-		{
-			"name":"简书",
-			"siteurl":"http://www.jianshu.com/"
-		},
-		{
 			"name":"一个",
 			"siteurl":"http://www.wufazhuce.com/"
 		},
@@ -41,16 +28,8 @@
 			"siteurl":"https://www.jiumodiary.com/"
 		},
 		{
-			"name":"器物与我",
-			"siteurl":"http://qwme.org"
-		},
-		{
 			"name":"InfoQ",
 			"siteurl":"https://www.infoq.cn/"
-		},
-		{
-			"name":"湾区日报",
-			"siteurl":"https://wanqu.co/"
 		},
 		{
 			"name":"ReadHub",
@@ -59,7 +38,14 @@
 		{
 			"name":"小专栏",
 			"siteurl":"https://xiaozhuanlan.com/"
+		},
+		{
+			"name":"全历史",
+			"siteurl":"https://www.allhistory.com/"
+		},
+		{
+			"name":"cnBeta",
+			"siteurl":"https://www.cnbeta.com/"
 		}
-
 	]
 }

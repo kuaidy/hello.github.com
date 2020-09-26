@@ -2,11 +2,6 @@
 	"error":false,
 	"site":[
 		{
-			"name":"坚果电影",
-			"siteurl":"http://nutts.tv/",
-			"status":"hot"
-		},
-		{
 			"name":"v电影",
 			"siteurl":"http://www.vmovier.com/",
 			"status":"hot"
@@ -15,10 +10,6 @@
 			"name":"疯狂电影搜索",
 			"siteurl":"http://ifkdy.com/",
 			"status":"hot"
-		},
-		{
-			"name":"video-get",
-			"siteurl":"https://video-get.com/"
 		},
 		{
 			"name":"neets",
@@ -37,10 +28,6 @@
 			"siteurl":"http://www.mvcat.com/"
 		},
 		{
-			"name":"视频下载",
-			"siteurl":"https://www.videofk.com/"
-		},
-		{
 			"name":"NO视频",
 			"siteurl":"http://www.novipnoad.com/"
 		},
@@ -55,6 +42,14 @@
 		{
 			"name":"蜗牛视频",
 			"siteurl":"https://snailok.com/"
+		},
+		{
+			"name":"蒙面大侠",
+			"siteurl":"https://www.mengmiandaxia.cn/"
+		},
+		{
+			"name":"片库",
+			"siteurl":"https://www.pianku.tv/"
 		}
 	]
 }
