@@ -15,5 +15,14 @@
     "haoyonghaowan":{
         "title":"好玩好用",
         "url":"http://www.haoyonghaowan.com/"
+    },
+    "waysto":{
+        "title":"沃克大数据导航",
+        "url":"https://www.waysto.work/data"
+    },
+    "sanmho"{
+        "title":"SAMHO设计导航",
+        "url":"https://www.samho.club/"
     }
+
 }
