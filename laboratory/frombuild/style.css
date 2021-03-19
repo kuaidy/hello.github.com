@@ -1,0 +1,47 @@
+#main{
+    display: flex;
+
+}
+/* 控件 */
+#FormControl{
+    width:250px;
+    border:1px solid #ccc;
+}
+
+.form-edit-widget-label {
+    font-size: 12px;
+    display: block;
+    width: 48%;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1%;
+    color: #333;
+    border: 1px solid #f4f6fc;
+    display: block;
+    cursor: move;
+    background: #f4f6fc;
+    border: 1px solid #f4f6fc;
+}
+
+/* 控件 */
+
+/* 设计区 */
+#FormDesigner{
+    width: 400px;
+    border: 1px solid #ccc;
+}
+#FormTitle{
+    display: flex;
+    justify-content: center;
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: #fff;
+}
+/* 设计区 */
+
+/* 属性区 */
+#FormProperty{
+    
+}
