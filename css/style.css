@@ -106,7 +106,7 @@ i{
     /* background-position-y: -90px; */
     background-image: url(http://www.rdonly.com/wp-content/uploads/2019/10/appfuns.png);
     background-repeat: no-repeat;
-    height: 400px;
+    /* height: 400px; */
     display: flex;
     justify-content: center;
     align-items: center;

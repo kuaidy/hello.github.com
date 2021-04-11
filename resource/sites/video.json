@@ -50,6 +50,10 @@
 		{
 			"name":"片库",
 			"siteurl":"https://www.pianku.tv/"
+		},
+		{
+			"name":"简影",
+			"siteurl":"https://tv.syrme.top/"
 		}
 	]
 }
