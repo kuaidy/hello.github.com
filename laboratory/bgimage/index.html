@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>baimage</title>
+    <link rel="icon" href="/image/icon/bgimage.png" type="image/x-icon"/>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <link rel="stylesheet" href="bgstyle.css">
     <script  type="text/javascript" src="backimage.js"></script>
     <script src="./plugs/minicolor/colorpicker.js"></script>
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?60803f9ca4e54b47471b79db84664a2b";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 <body>
     <div id="main">
         <!-- 背景图设置 -->
         <div id="GenerateImage">
             <div id=header>
-                <span>BGIMAGE</span>
-                <span style="font-size:12px;color:red;position: relative;top: -5px;left: 5px;font-family:隶书;">beta</span>
+                <span>BGImage</span>
+                <span style="font-size:12px;color:#fff;position: relative;top: -5px;left: 5px;background-color: crimson;padding: 0px 2px;border-radius: 2px;">beta</span>
             </div>
             <hr />
             <div id="setwidth" class="setting">
@@ -107,6 +119,14 @@
                     <option>楷体</option>
                     <option>隶书</option>
                 </datalist>
+            </div>
+            <div id="setTextStyle" class="setting">
+                <span>文字风格</span>
+                <select name="" id="TextStyleType" class="SelectControl">
+                    <option value="">自定义</option>
+                    <option value="youtube">Youtube风格</option>
+                    <option value="google">Google风格</option>
+                </select>
             </div>
             <!-- <div id="setbgimg" class="setting">
                 <input type="checkbox" value="图标平铺">图标平铺</input>

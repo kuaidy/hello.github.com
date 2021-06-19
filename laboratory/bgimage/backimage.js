@@ -38,9 +38,6 @@ $(function(){
             //$("#Imageid").css({""});
         })
     });
-
-
-
     //插件改变背景色
     var a = Colorpicker.create({
         el: "color-picker",
@@ -121,6 +118,11 @@ $(function(){
         ChangeTextColor();
     });
 
+    //字体类型
+    $("#TextFontFamily").change(function(){
+        ChangeTextFontFamily();
+    });
+
     //下载
     $("#download").click(function(){
         var bgicon=$("#bgicon").val();
@@ -178,6 +180,11 @@ $(function(){
         }else{
             $("div").remove(".div_WaterMarkText");
         }
+    });
+
+    //选择文字的风格
+    $("#TextStyleType").change(function(){
+        SetTextStyle();
     });
 });
 
@@ -354,34 +361,45 @@ function DownLoad(){
     ctx.fillRect(0+recaddsize,0+recaddsize,width,height);
     ctx.drawImage(img,(width-img.width-spanwidth)/2,(height-img.height)/2,img.width,img.height);
 
-    //设置文字
-    var textcontent=$("#ImageText").text();
-    var textsize=$("#ImageText").css("font-size");
-    var textfamily=$("#ImageText").css("font-family");
-    // 设置字体
-    ctx.font = textsize+" "+textfamily;
-    // 设置颜色
-    ctx.fillStyle = $("#ImageText").css("color");
-    // 设置水平对齐方式
-    ctx.textAlign = "left";
-    // 设置垂直对齐方式
-    ctx.textBaseline = "middle";
-    ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
+    var value=$("#TextStyleType").find("option:selected").attr("value");
+    switch(value){
+        case "youtube":
+            DrawYoutubeText(ctx);
+            break;
+
+        case "google":
+            break;
+
+        default:
+            //设置文字
+            var textcontent=$("#ImageText").text();
+            var textsize=$("#ImageText").css("font-size");
+            var textfamily=$("#ImageText").css("font-family");
+            // 设置字体
+            ctx.font = textsize+" "+textfamily;
+            // 设置颜色
+            ctx.fillStyle = $("#ImageText").css("color");
+            // 设置水平对齐方式
+            ctx.textAlign = "left";
+            // 设置垂直对齐方式
+            ctx.textBaseline = "middle";
+
+            ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
+    }
 
 
-    // 绘制水印
-    var WaterMarkText=$(".p_WaterMarkText").text();
-    var WaterMarkWith=$(".p_WaterMarkText").width()
-    var WaterMarkHeight=$(".p_WaterMarkText").height();
-    console.log(WaterMarkText);
-    console.log(WaterMarkHeight);
-    ctx.textAlign = "left";
-    ctx.textBaseline = "middle";
-    ctx.globalAlpha = 0.4;
-    ctx.fillText(WaterMarkText,width-WaterMarkWith-15, height-WaterMarkHeight);
-    
-    //console.log((width-img.width-spanwidth));
-    //console.log((height-spanheight)/2);
+    if(($("#ip_UseWaterMark").is(":checked"))){
+        // 绘制水印
+        var WaterMarkText=$(".p_WaterMarkText").text();
+        var WaterMarkWith=$(".p_WaterMarkText").width()
+        var WaterMarkHeight=$(".p_WaterMarkText").height();
+        console.log(WaterMarkText);
+        console.log(WaterMarkHeight);
+        ctx.textAlign = "left";
+        ctx.textBaseline = "middle";
+        ctx.globalAlpha = 0.4;
+        ctx.fillText(WaterMarkText,width-WaterMarkWith-15, height-WaterMarkHeight);
+    }
 
     // document.body.appendChild(canvas);
     var imgdata=canvas.toDataURL();
@@ -403,8 +421,6 @@ function savaImage(data,filename)
     // var event=document.createEvent('MouseEvents');
     // event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
     // save_link.dispatchEvent(event);
-
-    
 };
 //上传图片
 function ChangeLocalIcon(e){
@@ -456,6 +472,13 @@ function ChangeTextColor(){
     var textcolor=$("#TextColor").val();
     $("#ImageText").css("color",textcolor);
 }
+
+//设置字体类型
+function ChangeTextFontFamily(){
+    var textcolor=$("#TextFontFamily").val();
+    $("#ImageText").css("font-family",textcolor);
+}
+
 
 //图标推荐
 function ShowIcon(){
@@ -650,3 +673,161 @@ function SetWaterMark(){
 }
 
 
+//改变文字风格
+function SetTextStyle(){
+    var value=$("#TextStyleType").find("option:selected").attr("value");
+    console.log(value);
+    switch(value){
+        case "youtube":
+            YoutubeStyle();
+            break;
+
+        case "google":
+            GoogleStyle();
+            break;
+        default:
+            var textcontent=$("#TextContent").val();
+            $("#ImageText").html(textcontent);
+    }
+}
+
+var righttxtwidth;
+//YouTube风格
+function YoutubeStyle(){
+    var width=$("#ImageText").width();
+    var height=$("#ImageText").height();
+    var textcontent=$("#TextContent").val();
+    var arrstr=textcontent.split(' ');
+    var leftwidth=width*(arrstr[0].length/(arrstr[0].length+arrstr[1].length));
+    var rightwidth=width*(arrstr[1].length/(arrstr[0].length+arrstr[1].length));
+    
+    //空格右边的内容,目的获取宽度
+    var righttext=$("<span style='display:hidden;'></span>").html(arrstr[1]);
+    $("#ImageText").html(righttext);
+    righttxtwidth=righttext.width();
+    console.log(righttext.width());
+    // //创建SVG
+    var svg='<svg width="'+(width)+'" height="'+height+'" xmlns="http://www.w3.org/2000/svg" version="1.1">';
+        svg+='<text x="" y="'+height/2+'" dominant-baseline="middle">'+arrstr[0]+'</text>'
+        svg+='<rect x="'+(leftwidth)+'" width="'+(rightwidth)+'" height="'+height+'" rx="5" ry="5" fill="red"/>';
+        svg+='<text fill="white" x="'+(leftwidth+(rightwidth-righttxtwidth)/2)+'" y="'+height/2+'" dominant-baseline="middle">'+arrstr[1]+'</text>';
+        svg+='</svg>';
+    $("#ImageText").html(svg);
+}
+
+//绘制YouTube风格的文字
+function DrawYoutubeText(ctx){
+    var Imagewidth=$("#Imageid").width();
+    var Imageheight=$("#Imageid").height();
+    var Iconwidth=$("#ImageText").width();
+    var Iconheight=$("#ImageText").height();
+    var textcontent=$("#TextContent").val();
+    var arrstr=textcontent.split(' ');
+    var leftwidth=Iconwidth*(arrstr[0].length/(arrstr[0].length+arrstr[1].length));
+    var rightwidth=Iconwidth*(arrstr[1].length/(arrstr[0].length+arrstr[1].length));
+
+    ctx.fillStyle='#FF0000';
+    //ctx.fillRect((Imagewidth-Iconwidth)/2+leftwidth,(Imageheight-Iconheight)/2,rightwidth,Iconheight);
+    // drawRoundRectPath(ctx,0,0,100,100,5);
+    DrawFillRoundRect(ctx,(Imagewidth-Iconwidth)/2+leftwidth,(Imageheight-Iconheight)/2,rightwidth,Iconheight,5,"#ff0000");
+    //设置文字
+    var textcontent=$("#ImageText").text();
+    var textsize=$("#ImageText").css("font-size");
+    var textfamily=$("#ImageText").css("font-family");
+    // 设置字体
+    ctx.font = textsize+" "+textfamily;
+    // 设置颜色
+    ctx.fillStyle = "#000000";
+    // 设置水平对齐方式
+    ctx.textAlign = "middle";
+    // 设置垂直对齐方式
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(arrstr[0],((Imagewidth-Iconwidth)/2), (Imageheight)/2);
+    ctx.fillStyle="#ffffff";
+    ctx.fillText(arrstr[1],((Imagewidth-Iconwidth)/2+leftwidth+(rightwidth-righttxtwidth)/2), (Imageheight)/2);
+}
+
+//谷歌风格的字体
+function GoogleStyle(){
+    var content="";
+    var textcontent=$("#TextContent").val();
+    for(var i=0;i<textcontent.length;i++){
+        var num=i%6;
+        switch(num){
+            case 0:
+                content+="<span style='color:#4283F6;'>"+textcontent[i]+"</span>";
+                break;
+            case 1:
+                content+="<span style='color:#FF373A;'>"+textcontent[i]+"</span>";
+                break;
+            case 2:
+                content+="<span style='color:#FDBB02;'>"+textcontent[i]+"</span>";
+                break;
+            case 3:
+                content+="<span style='color:#4283F6;'>"+textcontent[i]+"</span>";
+                break;
+            
+            case 4:
+                content+="<span style='color:#33A851;'>"+textcontent[i]+"</span>";
+                break;
+            
+            case 5:
+                content+="<span style='color:#FF373A;'>"+textcontent[i]+"</span>";
+                break;
+        }
+    }
+    
+    $("#ImageText").html(content);
+}
+
+
+//绘制圆角矩形
+function DrawRoundRect(cxt, x,y,w, h, r) {
+    
+    cxt.beginPath();
+    //从左上角开始绘制
+    cxt.arc(x + r, y + r, r, Math.PI, Math.PI * 3/2);
+    
+    //矩形上边线
+    // cxt.moveTo(x+r,y);
+    cxt.lineTo(x+w-r,y);
+
+    //右上角圆弧 
+    cxt.arc(x+w-r, y+r, r, Math.PI * 3/ 2, Math.PI*2);
+
+    //矩形右边线
+    // cxt.moveTo(x+w,y+r);
+    cxt.lineTo(x+w, y+h-r);
+
+    //右下角圆弧
+    cxt.arc(x+w-r, y+h-r, r, Math.PI*0, Math.PI * 1 / 2);
+
+    //矩形下边线
+    // cxt.moveTo(x+w-r,y+h);
+    cxt.lineTo(x+r, y+h);
+
+    //左下角圆弧
+    cxt.arc(x+r, y+h-r, r, Math.PI * 1 / 2, Math.PI);
+
+    //矩形左边线
+    // cxt.moveTo(x,y+h-r);
+    cxt.lineTo(x,y+r);
+
+    // cxt.stroke();
+    cxt.closePath();
+}
+
+
+//绘制填充的圆角矩形
+
+function DrawFillRoundRect(cxt,x,y,w,h,r,fillcolor)
+{
+    if (2 * r > w || 2 * r > h) { return false; }
+
+    cxt.save();
+    DrawRoundRect(cxt, x, y, w,h,r);
+    cxt.fillStyle = fillcolor || "#000"; //若是给定了值就用给定的值否则给予默认值  
+    cxt.fill();
+    cxt.restore();
+}

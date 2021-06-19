@@ -97,9 +97,10 @@ div#ImageDown {
     width: 100px;
     padding: 2px;
     /* font-size: .8125000003rem; */
-    line-height: 1.75;
+    /* line-height: 1.75; */
     border-radius: .25rem;
     border: 1px solid #ccc;
+    height: 20px;
 }
 
 button.Option {
@@ -258,3 +259,13 @@ div#ImageIconColor{
     opacity: 0.3;
 }
 /* 水印 */
+
+.SelectControl {
+    width: 105px;
+    /* padding: 2px; */
+    /* font-size: .8125000003rem; */
+    /* line-height: 1.75; */
+    border-radius: .25rem;
+    border: 1px solid #ccc;
+    height: 25px;
+}
