@@ -368,24 +368,14 @@ function DownLoad(){
             break;
 
         case "google":
+            DrawGoogleText(ctx);
             break;
 
         default:
-            //设置文字
-            var textcontent=$("#ImageText").text();
-            var textsize=$("#ImageText").css("font-size");
-            var textfamily=$("#ImageText").css("font-family");
-            // 设置字体
-            ctx.font = textsize+" "+textfamily;
-            // 设置颜色
-            ctx.fillStyle = $("#ImageText").css("color");
-            // 设置水平对齐方式
-            ctx.textAlign = "left";
-            // 设置垂直对齐方式
-            ctx.textBaseline = "middle";
-
-            ctx.fillText(textcontent,((width-img.width-spanwidth)/2+img.width), (height)/2);
+            DrawText(ctx);
     }
+
+
 
 
     if(($("#ip_UseWaterMark").is(":checked"))){
@@ -422,6 +412,7 @@ function savaImage(data,filename)
     // event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
     // save_link.dispatchEvent(event);
 };
+
 //上传图片
 function ChangeLocalIcon(e){
     var reader=new FileReader();
@@ -715,6 +706,30 @@ function YoutubeStyle(){
     $("#ImageText").html(svg);
 }
 
+//无风格文字
+function DrawText(ctx){
+    var Imagewidth=$("#Imageid").width();
+    var Imageheight=$("#Imageid").height();
+    var Textwidth=$("#ImageText").width();
+    var Textheight=$("#ImageText").height();
+    var img=document.getElementById("ImageBgicon");
+    //设置文字
+    var textcontent=$("#ImageText").text();
+    var textsize=$("#ImageText").css("font-size");
+    var textfamily=$("#ImageText").css("font-family");
+    // 设置字体
+    ctx.font = textsize+" "+textfamily;
+    // 设置颜色
+    ctx.fillStyle = $("#ImageText").css("color");
+    // 设置水平对齐方式
+    ctx.textAlign = "middle";
+    // 设置垂直对齐方式
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(textcontent,((Imagewidth-img.width-Textwidth)/2+img.width), (Imageheight)/2);
+
+}
+
 //绘制YouTube风格的文字
 function DrawYoutubeText(ctx){
     var Imagewidth=$("#Imageid").width();
@@ -779,6 +794,46 @@ function GoogleStyle(){
     }
     
     $("#ImageText").html(content);
+}
+
+function DrawGoogleText(ctx){
+    var Imagewidth=$("#Imageid").width();
+    var Imageheight=$("#Imageid").height();
+    var Iconwidth=$("#ImageText").width();
+    var Iconheight=$("#ImageText").height();
+    var textcontent=$("#TextContent").val();
+    var textlength=textcontent.length;
+    //每个字所占的宽度
+    var eachlength=Iconwidth/textlength;
+    var textsize=$("#ImageText").css("font-size");
+    var textfamily=$("#ImageText").css("font-family");
+    ctx.font = textsize+" "+textfamily;
+    for(var i=0;i<textlength;i++){
+        var num=i%6;
+        switch(num){
+            case 0:
+                ctx.fillStyle="#4283F6";
+                break;
+            case 1:
+                ctx.fillStyle="#FF373A";
+                break;
+            case 2:
+                ctx.fillStyle="#FDBB02";
+                break;
+            case 3:
+                ctx.fillStyle="#4283F6";
+                break;
+
+            case 4:
+                ctx.fillStyle="#33A851";
+                break;
+            case 5:
+                ctx.fillStyle="#FF373A";
+                break;
+        }
+
+        ctx.fillText(textcontent[i],((Imagewidth-Iconwidth)/2+eachlength*i), (Imageheight)/2);
+    }
 }
 
 
