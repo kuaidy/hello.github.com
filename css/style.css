@@ -3,15 +3,16 @@
 	padding:0px;
 }
 body{
-	/*background-image:url('images/back.jpg');*/ 
-	/*background-repeat: no-repeat; */
-	/*background-attachment: fixed;*/
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(https://api.kdcc.cn/img/jump.php); 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
     background-color:#EBE8D7;
 	font-size:18px;
 	font-family:微软雅黑;
-	background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+	/* background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab); */
     animation: Gradient-RDc81Ss 10s ease infinite;
     min-height: 100vh;
+    background-size: cover;
 }
 ul{
     list-style: none;
