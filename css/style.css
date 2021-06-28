@@ -541,3 +541,68 @@ li.hot{
 }
 
 
+/* Switch开关样式 */
+input[type='checkbox'].switch {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    transition: border-color .3s, background-color .3s;
+}
+
+input[type='checkbox'].switch::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0, 0, 2px, #999;
+    transition: .4s;
+    top: 2px;
+    position: absolute;
+    left: 2px;
+}
+
+input[type='checkbox'].switch:checked {
+    background: rgb(19, 206, 102);
+}
+
+/* 当input[type=checkbox]被选中时：伪元素显示下面样式 位置发生变化 */
+input[type='checkbox'].switch:checked::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 2px;
+}
+/* Switch开关样式 */
+
+/* 设置样式 */
+.Setting {
+    background-color: #fff;
+    width: 70vw;
+    margin: auto;
+    max-width: 1024px;
+}
+ul.ulsettypes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+li.lisettype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+input.optionbutton {
+    border: none;
+    padding: 5px;
+    width: 75px;
+    margin: 10px;
+}
