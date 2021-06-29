@@ -22,7 +22,8 @@
 	<meta name="baidu-site-verification" content="wx66rdv1hJ" />
 </head>
 <body>
-    <div id="header" class="outbox"><!--header-->
+	<div class="main">
+	<div id="header" class="outbox"><!--header-->
         <div class="navinner">
             <span id="span2"><a href="http://www.rdonly.com/">寻</a></span>
             <span id="span3">
@@ -157,5 +158,103 @@
 			</div>
 		</div> 
 	</div>
+
+	<div class="AddSites">
+	</div>
+	
+	<div class="AddForm">
+		<div class="sitetitle">
+			<span>网站名称</span>
+			<input type="text">
+		</div>
+
+		<div class="siteurl">
+			<span>网站地址</span>
+			<input type="text">
+		</div>
+
+		<div class="sitetype">
+			<span>网站分类</span>
+			<input type="text">
+		</div>
+		<div class="siteoption">
+			<button>确定</button>
+			<button>取消</button>
+		</div>
+	</div>	
+	</div>
+    
 </body>
+
+<script>
+
+	
+
+	//判断浏览器是否可用indexeddb数据库
+	function IsSupportIndexeddb(){
+		window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+		
+		window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+		window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+		
+		if (!window.indexedDB) {
+			window.alert("您的浏览器不支持indexeddb数据库，无法使用此功能，请使用最新版谷歌，edge，火狐浏览器！")
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	var DBNAME="NAVDATABASE";
+	var VERSION=1;
+	var TBTYPE="SITESTYPES";
+	var TBSITES="SITES"
+	var db;
+
+	//创建一个数据库，版本号为1，表
+	function CreateDatabase(){
+		var request = indexedDB.open(DBNAME,VERSION);
+		
+		request.onerror = function(event) {
+			console.log("创建失败");
+		};
+         
+		request.onupgradeneeded = function(event) {
+			db = event.target.result;
+			if (!db.objectStoreNames.contains(TBTYPE)){
+				db.createObjectStore(TBTYPE, { autoIncrement:true});
+			}
+			if (!db.objectStoreNames.contains(TBSITES)){
+				db.createObjectStore(TBSITES, { autoIncrement:true });
+			}
+		}
+
+		request.onsuccess = function(event) {
+			db = event.target.result;
+            console.log("创建成功");
+         };
+	}
+
+	//添加内容
+	function Add(obj,dbname,version,data){
+		var request = indexedDB.open(DBNAME,VERSION);
+		request.onsuccess = function(event) {
+			db = event.target.result;
+
+            var res = db.transaction([obj],'readwrite').objectStore(obj).add(data);
+
+			res.onsuccess = function (event) {
+				console.log('数据写入成功');
+			};
+
+			res.onerror = function (event) {
+				console.log('数据写入失败');
+			}
+         };
+		
+	};
+	CreateDatabase();
+	var data={"分类":"常用","网址":"https://www.rdonly.com"};
+	Add(TBSITES,DBNAME,VERSION,data);
+</script>
 </html>
