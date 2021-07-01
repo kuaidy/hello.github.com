@@ -608,8 +608,9 @@ input.optionbutton {
 }
 
 .AddSites{
+    display: none;
 	background-color: #bbb;
-	opacity: 0.3;
+	opacity: 0.5;
 	z-index:2;
 	width: 100%;
 	height: 100%;
@@ -617,18 +618,32 @@ input.optionbutton {
 	top:0px;
 	left: 0px;
 }
-.AddForm{
-    position: fixed;
-    top: 200px;
-    /* width: 800px; */
-    /* height: 500px; */
-    background-color: #fff;
-    z-index: 6;
-    box-shadow: 0px 1px 30px #333;
-}
+
 .main {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.AddForm {
+    position: fixed;
+    top: 200px;
+    /* width: 800px; */
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    z-index: 6;
+    display: none;
+    box-shadow: 0px 1px 30px #333;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }

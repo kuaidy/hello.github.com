@@ -141,21 +141,21 @@
 			</ul>
 		</div>
 		<div class="setoption">
-			<input type="button" value="添加分类" class="optionbutton">
-			<input type="button" value="添加网址" class="optionbutton">
+			<!-- <input type="button" value="添加分类" class="optionbutton"> -->
+			<input type="button" value="添加网址" class="optionbutton" onclick="AddSite();">
 			<input type="button" value="保存" class="optionbutton">
 			<input type="button" value="导出" class="optionbutton">
 			<input type="button" value="导入" class="optionbutton">
 		</div>
 
 		<div id="content" class="inner"><!--content-->
-			<div class="tags"> 
+			<!-- <div class="tags"> 
 				<span class="titlesign"></span>		
 				<h3>常用网站</h3>
 			</div>
 			<div class="sitediv" id="">
 				
-			</div>
+			</div> -->
 		</div> 
 	</div>
 
@@ -165,21 +165,24 @@
 	<div class="AddForm">
 		<div class="sitetitle">
 			<span>网站名称</span>
-			<input type="text">
+			<input type="text" id="sitename">
 		</div>
 
 		<div class="siteurl">
 			<span>网站地址</span>
-			<input type="text">
+			<input type="text" id="siteurl">
 		</div>
 
 		<div class="sitetype">
 			<span>网站分类</span>
-			<input type="text">
+			<input type="text" list="typelist" placeholder="请选择" class="" id="sitetype">
+                <datalist id="typelist">
+                　　<option value="常用"></option>
+                </datalist>
 		</div>
 		<div class="siteoption">
-			<button>确定</button>
-			<button>取消</button>
+			<input type="button" class="optionbutton" value="确定" onclick="Confirm();">
+			<input type="button" class="optionbutton" value="取消" onclick="Cancel();">
 		</div>
 	</div>	
 	</div>
@@ -187,8 +190,29 @@
 </body>
 
 <script>
+	//显示添加界面
+	function AddSite(){
+		$(".AddSites").css("display","flex");
+		$(".AddForm").css("display","flex");
+	}
 
-	
+	//关闭添加界面
+	function Cancel(){
+		$(".AddSites").css("display","none");
+		$(".AddForm").css("display","none");
+	}
+
+	//向indexdb添加数据
+	function Confirm(){
+		var flag=IsSupportIndexeddb();
+		var sitename=$("#sitename").val();
+		var siteurl=$("#siteurl").val();
+		var sitetype=$("#sitetype").val();
+		var data={"type":sitetype,"name":sitename,"url":siteurl};
+		if(flag){
+			Add(TBSITES,DBNAME,VERSION,data);
+		}
+	}
 
 	//判断浏览器是否可用indexeddb数据库
 	function IsSupportIndexeddb(){
@@ -221,11 +245,9 @@
          
 		request.onupgradeneeded = function(event) {
 			db = event.target.result;
-			if (!db.objectStoreNames.contains(TBTYPE)){
-				db.createObjectStore(TBTYPE, { autoIncrement:true});
-			}
 			if (!db.objectStoreNames.contains(TBSITES)){
-				db.createObjectStore(TBSITES, { autoIncrement:true });
+				var objstore=db.createObjectStore(TBSITES, { autoIncrement:true });
+				objstore.createIndex('type', 'type', { unique: false });
 			}
 		}
 
@@ -237,6 +259,7 @@
 
 	//添加内容
 	function Add(obj,dbname,version,data){
+		CreateDatabase();
 		var request = indexedDB.open(DBNAME,VERSION);
 		request.onsuccess = function(event) {
 			db = event.target.result;
@@ -251,10 +274,109 @@
 				console.log('数据写入失败');
 			}
          };
-		
 	};
-	CreateDatabase();
-	var data={"分类":"常用","网址":"https://www.rdonly.com"};
-	Add(TBSITES,DBNAME,VERSION,data);
+
+	//读取数据
+	function Read(id){
+		var request = indexedDB.open(DBNAME,VERSION);
+		request.onsuccess = function(event) {
+			db = event.target.result;
+			var transaction = db.transaction([TBSITES]);
+			var objectStore = transaction.objectStore(TBSITES);
+			var request = objectStore.get();
+
+			request.onerror = function(event) {
+				console.log('事务失败');
+			};
+
+			request.onsuccess = function(event) {
+				console.log(event);
+				if (request.result) {
+					console.log('type: ' + request.result.type);
+					console.log('name: ' + request.result.name);
+					console.log('url: ' + request.result.url);
+				} else {
+					console.log('未获得数据记录');
+				}
+			};
+		}
+	};
+
+	function readAll() {
+		var arr=new Array();
+		var request = indexedDB.open(DBNAME,VERSION);
+		request.onsuccess = function(event) {
+			db = event.target.result;
+			var tran=db.transaction(TBSITES);
+			var objectStore =tran.objectStore(TBSITES);
+			objectStore.openCursor().onsuccess = function (event) {
+				var cursor = event.target.result;
+				if (cursor) {
+					arr.push(cursor.value);
+					cursor.continue();
+				} else {
+					console.log('没有更多数据了！');
+				}
+			};
+			tran.oncomplete=function(event){
+				var data=HandleData(arr);
+				ShowData(data);
+			}
+		}
+	};
+
+	function LoadData(){
+		readAll();
+	};
+	LoadData();
+
+	//数据按照type分类
+	function HandleData(arr){
+		var nlist = [];
+		for (var i = 0; i < arr.length; i++) {
+			console.log(arr[i].str);
+			if (nlist.length == 0) {
+				nlist.push({
+					type: arr[i].type,
+					data: [arr[i]]
+				})
+			} else {
+				var index = nlist.findIndex(item => item.type == arr[i].type);
+				if (index >= 0) {
+					nlist[index].data.push(arr[i])
+				} else {
+					nlist.push({
+						type: arr[i].type,
+						data: [arr[i]]
+					})
+				}
+			}
+		}
+		return nlist;
+	}
+
+	function ShowData(data){
+		for(var i=0;i<data.length;i++){
+			console.log(data);
+			var innercontent='<div class="tags" onclick="ChangeStatus"><span class="titlesign"></span><h3>'+data[i].type+'</h3></div><div class="sitediv"><ul id="'+i+'" class="sitesul"></ul></div>';
+			$("#content").append(innercontent);
+			
+			var resourcename='#'+i;
+			var fatherdom=$(resourcename);
+			for(var j=0;j<data[i].data.length;j++){
+				var x=Math.floor(Math.random()*100+1);
+				var y=Math.floor(Math.random()*100+1);
+				var z=Math.floor(Math.random()*100+1);
+
+				var firstname=data[i].data[j].name.substring(0,1);
+				var childdom='<li class="sitesli"><i class="siteicon" style="background-color:#'+x+y+z+'">'+firstname+'</i><a class="sitetext" href="'+data[i].data[j].url+'">'+data[i].data[j].name+'</a></li>';
+				fatherdom.append(childdom);
+			}
+			
+			fatherdom.append("<li style='clear:both;'></li>");
+			
+		}
+	}
+
 </script>
 </html>
