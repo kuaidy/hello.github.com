@@ -627,11 +627,11 @@ input.optionbutton {
 }
 
 input[type="text"] {
-    width: 300px;
+    /* width: 300px;
     height: 30px;
     margin: 10px;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 5px; */
 }
 .AddForm {
     position: fixed;
