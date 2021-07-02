@@ -626,12 +626,12 @@ input.optionbutton {
     align-items: center;
 }
 
-input[type="text"] {
-    /* width: 300px;
+.siteinput {
+    width: 300px;
     height: 30px;
     margin: 10px;
     border: 1px solid #ccc;
-    padding: 5px; */
+    padding: 5px;
 }
 .AddForm {
     position: fixed;

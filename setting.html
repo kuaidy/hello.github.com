@@ -46,106 +46,114 @@
 	<div class="Setting">
 		<div class="setname">
 			<ul class="ulsettypes">
-				<li class="lisettype">
-					<label>自定义网址</label>
-					<input type="checkbox" class="switch">
-				</li>
                 <li class="lisettype">
 					<label>阅读（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="read">
 				</li>
                 <li class="lisettype">
 					<label>社区（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="community">
+				</li>
+				<li class="lisettype">
+					<label>听歌（默认）</label>
+					<input type="checkbox" class="switch" checked="checked" value="music">
 				</li>
                 <li class="lisettype">
 					<label>文艺（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="musicarticle">
 				</li>
                 <li class="lisettype">
 					<label>视频（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="video">
 				</li>
                 <li class="lisettype">
 					<label>直播（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="show">
+				</li>
+				<li class="lisettype">
+					<label>字幕（默认）</label>
+					<input type="checkbox" class="switch" checked="checked" value="caption">
 				</li>
                 <li class="lisettype">
 					<label>资源（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="resource">
 				</li>
                 <li class="lisettype">
 					<label>动漫（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="carton">
 				</li>
                 <li class="lisettype">
 					<label>游戏（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="game">
 				</li>
                 <li class="lisettype">
 					<label>设计（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="design">
 				</li>
                 <li class="lisettype">
 					<label>图标（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="icon">
 				</li>
                 <li class="lisettype">
 					<label>PPT（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="ppt">
 				</li>
                 <li class="lisettype">
 					<label>博客（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="blog">
 				</li>
                 <li class="lisettype">
 					<label>工具（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="tool">
 				</li>
                 <li class="lisettype">
 					<label>在线文档（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="doconline">
 				</li>
                 <li class="lisettype">
 					<label>站长工具（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="webmaster">
 				</li>
                 <li class="lisettype">
 					<label>学习（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="study">
 				</li>
                 <li class="lisettype">
 					<label>问答（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="question">
 				</li>
                 <li class="lisettype">
 					<label>网络安全（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="network">
 				</li>
                 <li class="lisettype">
 					<label>应用（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="app">
 				</li>
                 <li class="lisettype">
 					<label>自媒体（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="write">
 				</li>
                 <li class="lisettype">
 					<label>工作（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="work">
 				</li>
                 <li class="lisettype">
 					<label>导航（默认）</label>
-					<input type="checkbox" class="switch">
+					<input type="checkbox" class="switch" checked="checked" value="lead">
+				</li>
+				<li class="lisettype">
+					<label>自定义网址</label>
+					<input type="checkbox" class="switch" value="custom">
 				</li>
 			</ul>
 		</div>
 		<div class="setoption">
 			<!-- <input type="button" value="添加分类" class="optionbutton"> -->
 			<input type="button" value="添加网址" class="optionbutton" onclick="AddSite();">
-			<input type="button" value="保存" class="optionbutton">
-			<input type="button" value="导出" class="optionbutton">
-			<input type="button" value="导入" class="optionbutton">
+			<!-- <input type="button" value="保存" class="optionbutton"> -->
+			<!-- <input type="button" value="导出" class="optionbutton"> -->
+			<!-- <input type="button" value="导入" class="optionbutton"> -->
 		</div>
 
 		<div id="content" class="inner"><!--content-->
@@ -165,17 +173,17 @@
 	<div class="AddForm">
 		<div class="sitetitle">
 			<span>网站名称</span>
-			<input type="text" id="sitename">
+			<input type="text" id="sitename" class="siteinput">
 		</div>
 
 		<div class="siteurl">
 			<span>网站地址</span>
-			<input type="text" id="siteurl">
+			<input type="text" id="siteurl" class="siteinput">
 		</div>
 
 		<div class="sitetype">
 			<span>网站分类</span>
-			<input type="text" list="typelist" placeholder="请选择" class="" id="sitetype">
+			<input type="text" list="typelist" placeholder="请选择" class="siteinput" id="sitetype">
                 <datalist id="typelist">
                 　　<option value="常用"></option>
                 </datalist>
@@ -190,6 +198,15 @@
 </body>
 
 <script>
+	$(".switch").click(function(e){
+		console.log(this);
+		var data={"defaulttype":this.value,"canuse":this.checked};
+		var flag=IsSupportIndexeddb();
+		if(flag){
+			AddData(TBTYPE,data,IndexDefaultType,this.value);
+		}
+	});
+
 	//显示添加界面
 	function AddSite(){
 		$(".AddSites").css("display","flex");
@@ -231,96 +248,132 @@
 
 	var DBNAME="NAVDATABASE";
 	var VERSION=1;
-	var TBTYPE="SITESTYPES";
+	var TBTYPE="SITESTYPESDEFAULT";
 	var TBSITES="SITES"
 	var db;
+	var IndexDefaultType="defaulttype";
+	var IndexType="type";
 
 	//创建一个数据库，版本号为1，表
 	function CreateDatabase(){
 		var request = indexedDB.open(DBNAME,VERSION);
 		
 		request.onerror = function(event) {
-			console.log("创建失败");
+			console.log("打开失败");
 		};
          
 		request.onupgradeneeded = function(event) {
 			db = event.target.result;
 			if (!db.objectStoreNames.contains(TBSITES)){
-				var objstore=db.createObjectStore(TBSITES, { autoIncrement:true });
+				var objstore=db.createObjectStore(TBSITES, { keyPath:'id',autoIncrement:true });
 				objstore.createIndex('type', 'type', { unique: false });
+			}
+			if (!db.objectStoreNames.contains(TBTYPE)){
+				var objstore=db.createObjectStore(TBTYPE, {keyPath:'id',autoIncrement:true });
+				objstore.createIndex('defaulttype', 'defaulttype', { unique: false });
 			}
 		}
 
 		request.onsuccess = function(event) {
 			db = event.target.result;
-            console.log("创建成功");
+            console.log("打开成功");
          };
 	}
 
 	//添加内容
-	function Add(obj,dbname,version,data){
-		CreateDatabase();
-		var request = indexedDB.open(DBNAME,VERSION);
-		request.onsuccess = function(event) {
-			db = event.target.result;
+	function AddData(obj,data,index,indexvalue){
+		if(db){
+			var transaction = db.transaction([obj], 'readonly');
+			var store = transaction.objectStore(obj);
+			var index = store.index(index);
+			var request = index.get(indexvalue);
 
-            var res = db.transaction([obj],'readwrite').objectStore(obj).add(data);
+			request.onsuccess = function (e) {
+				var result = e.target.result;
+				if (result) {
+					switch(obj){
+						case TBTYPE:
+							result.canuse=data.canuse;
+							break;
+					}
+					Update(obj,result);
+				} else {
+					Add(obj,data);
+				}
+			}
+		}
+	};
 
+	//添加数据
+	function Add(obj,data){
+		if(db){
+			var res = db.transaction([obj],'readwrite').objectStore(obj).add(data);
 			res.onsuccess = function (event) {
 				console.log('数据写入成功');
 			};
-
 			res.onerror = function (event) {
 				console.log('数据写入失败');
 			}
-         };
-	};
+		}
+	}
+
+	//更新数据
+	function Update(obj,data){
+		if(db){
+			var res = db.transaction([obj], 'readwrite').objectStore(obj).put(data);
+			res.onsuccess = function (e) {
+				console.log('数据更新成功');
+			}
+
+			res.onerror = function (event) {
+				console.log('数据更新失败');
+			}
+		}
+	}
+
 
 	//读取数据
-	function Read(id){
-		var request = indexedDB.open(DBNAME,VERSION);
-		request.onsuccess = function(event) {
-			db = event.target.result;
-			var transaction = db.transaction([TBSITES]);
-			var objectStore = transaction.objectStore(TBSITES);
-			var request = objectStore.get();
+	function Read(obj,index,indexvalue){
+		CreateDatabase();
+		if(db){
+			var transaction = db.transaction([obj], 'readonly');
+			var store = transaction.objectStore(obj);
+			var index = store.index(index);
+			var request = index.get(indexvalue);
 
-			request.onerror = function(event) {
-				console.log('事务失败');
-			};
-
-			request.onsuccess = function(event) {
-				console.log(event);
-				if (request.result) {
-					console.log('type: ' + request.result.type);
-					console.log('name: ' + request.result.name);
-					console.log('url: ' + request.result.url);
+			request.onsuccess = function (e) {
+				var result = e.target.result;
+				if (result) {
+					console.log(result);
 				} else {
-					console.log('未获得数据记录');
+					// ...
 				}
-			};
+			}
 		}
 	};
 
 	function readAll() {
-		var arr=new Array();
-		var request = indexedDB.open(DBNAME,VERSION);
-		request.onsuccess = function(event) {
-			db = event.target.result;
-			var tran=db.transaction(TBSITES);
-			var objectStore =tran.objectStore(TBSITES);
-			objectStore.openCursor().onsuccess = function (event) {
-				var cursor = event.target.result;
-				if (cursor) {
-					arr.push(cursor.value);
-					cursor.continue();
-				} else {
-					console.log('没有更多数据了！');
+		CreateDatabase();
+		if(db){
+			var arr=new Array();
+			var request = indexedDB.open(DBNAME,VERSION);
+			request.onsuccess = function(event) {
+				db = event.target.result;
+				var tran=db.transaction(TBSITES);
+				var objectStore =tran.objectStore(TBSITES);
+				objectStore.openCursor().onsuccess = function (event) {
+					var cursor = event.target.result;
+					if (cursor) {
+						arr.push(cursor.value);
+						cursor.continue();
+					} else {
+						console.log('没有更多数据了！');
+					}
+				};
+				tran.oncomplete=function(event){
+					var data=HandleData(arr);
+					ShowData(data);
 				}
-			};
-			tran.oncomplete=function(event){
-				var data=HandleData(arr);
-				ShowData(data);
 			}
 		}
 	};
