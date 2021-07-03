@@ -474,6 +474,10 @@ function ShowTypeStatus(arr){
 			var dom="input[type='checkbox'][value='"+arr[i].defaulttype+"']";
 			// console.log(dom);
 			$(".ulsettypes").find(dom).prop('checked',false);
+		}else{
+			var dom="input[type='checkbox'][value='"+arr[i].defaulttype+"']";
+			// console.log(dom);
+			$(".ulsettypes").find(dom).prop('checked',true);
 		}
 	}
 }
