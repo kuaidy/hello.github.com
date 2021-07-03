@@ -6,7 +6,7 @@
     <meta name="description" content="优秀网站，在线音乐，免费视频，设计，游戏，学习，阅读，资源搜索，导航">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <base target="_blank">
-	<title>寻。--找一些有趣的东西</title>
+	<title>寻--找一些有趣的东西</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
@@ -36,8 +36,8 @@
 								<li class="moreinfo_tag"><a href="http://blog.rdonly.com/">博客</a></li>
 							</ul> -->
 						</li>
+						<li><a href="./setting.html">设置</a></li>
 						<li><a href="./update.html">关于</a></li>
-						<!-- <li><a href="./update.html">···</a></li> -->
 					</ul>
 				</span>
 			</div>
@@ -80,7 +80,17 @@
 			<span class="FunctionItem" id="FunctionLead">导航</span>
 			<span class="FunctionItem" id="FunctionShortcuts">快捷键</span>
 		</div> -->
-
+		<!-- 自定义导航 -->
+		<div id="selfcontent" class="inner"><!--content-->
+			<!-- <div class="tags"> 
+				<span class="titlesign"></span>		
+				<h3>常用网站</h3>
+			</div>
+			<div class="sitediv" id="">
+				
+			</div> -->
+		</div> 
+		<!-- 默认导航 -->
 		<div id="content" class="inner"><!--content-->
 			<!-- <div class="tags"> -->
 				<!-- <span class="titlesign"></span>		 -->
@@ -138,32 +148,32 @@
 	</div>
 </body>
 <script type="text/javascript" src="js/function.js"></script>
-<script>
+<script type="text/javascript">
 	// getdata("none","自定义");
 	getdata("read","阅读");
-	getdata("community","社区");
-	getdata("music","听歌");
-	getdata("musicarticle","文艺");
 	getdata("video","视频");
+	getdata("music","听歌");
+	getdata("resource","资源");
+	getdata("tool","工具");
+	getdata("community","社区");
 	getdata("show","直播");
 	getdata("caption","字幕");
-	getdata("resource","资源");
 	getdata("carton","动漫");
 	getdata("game","游戏");
 	getdata("design","设计");
 	getdata("icon","图标");
 	getdata("ppt","PPT");
 	getdata("blog","博客");
-	getdata("tool","工具");
-	getdata("doconline","在线文档");
-	getdata("webmaster","站长工具");
+	getdata("doconline","文档");
+	getdata("webmaster","站长");
 	getdata("study","学习");
 	getdata("question","问答");
-	getdata("network","网络安全");
 	getdata("app","应用");
 	getdata("write","自媒体");
 	getdata("work","工作");
 	getdata("lead","导航");
+
+	ReadHomeData(TBTYPE);
 </script>
 <!-- //search -->
 <script>

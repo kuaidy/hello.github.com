@@ -6,7 +6,7 @@
     <meta name="description" content="优秀网站，在线音乐，免费视频，设计，游戏，学习，阅读，资源搜索，导航">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <base target="_blank">
-	<title>寻-找一些有趣的东西</title>
+	<title>寻--找一些有趣的东西</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
@@ -20,6 +20,7 @@
 	</script>
 	<meta name="baidu_union_verify" content="eca8b06640ca20341ee578ec86d7e7f3">
 	<meta name="baidu-site-verification" content="wx66rdv1hJ" />
+	<script src="//at.alicdn.com/t/font_2344911_ujxy4ymac.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -36,8 +37,8 @@
                             <li class="moreinfo_tag"><a href="http://blog.rdonly.com/">博客</a></li>
                         </ul> -->
                     </li>
+					<li><a href="./setting.html">设置</a></li>
                     <li><a href="./update.html">关于</a></li>
-                    <li><a href="./update.html">···</a></li>
                 </ul>
             </span>
         </div>
@@ -48,31 +49,31 @@
 			<ul class="ulsettypes">
                 <li class="lisettype">
 					<label>阅读（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="read">
+					<input type="checkbox" class="switch" checked="checked" value="read" data="阅读">
 				</li>
                 <li class="lisettype">
 					<label>社区（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="community">
+					<input type="checkbox" class="switch" checked="checked" value="community" data="社区">
 				</li>
 				<li class="lisettype">
 					<label>听歌（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="music">
+					<input type="checkbox" class="switch" checked="checked" value="music" data="听歌">
 				</li>
                 <li class="lisettype">
 					<label>文艺（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="musicarticle">
+					<input type="checkbox" class="switch" checked="checked" value="musicarticle" data="文艺">
 				</li>
                 <li class="lisettype">
 					<label>视频（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="video">
+					<input type="checkbox" class="switch" checked="checked" value="video" data="视频">
 				</li>
                 <li class="lisettype">
 					<label>直播（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="show">
+					<input type="checkbox" class="switch" checked="checked" value="show" data="直播">
 				</li>
 				<li class="lisettype">
 					<label>字幕（默认）</label>
-					<input type="checkbox" class="switch" checked="checked" value="caption">
+					<input type="checkbox" class="switch" checked="checked" value="caption" data="字幕">
 				</li>
                 <li class="lisettype">
 					<label>资源（默认）</label>
@@ -150,13 +151,14 @@
 		</div>
 		<div class="setoption">
 			<!-- <input type="button" value="添加分类" class="optionbutton"> -->
-			<input type="button" value="添加网址" class="optionbutton" onclick="AddSite();">
-			<!-- <input type="button" value="保存" class="optionbutton"> -->
+			<input type="button" value="添加网站" class="optionbutton" onclick="AddSite();">
+			<input type="button" value="删除网站" class="optionbutton" onclick="DelSite();">
+			<span style="font-size:12px;color:red;">注意：自定义网站的数据存储在本地，删除本地数据就没有了。</span>
 			<!-- <input type="button" value="导出" class="optionbutton"> -->
 			<!-- <input type="button" value="导入" class="optionbutton"> -->
 		</div>
 
-		<div id="content" class="inner"><!--content-->
+		<div id="selfcontent" class="inner"><!--content-->
 			<!-- <div class="tags"> 
 				<span class="titlesign"></span>		
 				<h3>常用网站</h3>
@@ -173,20 +175,17 @@
 	<div class="AddForm">
 		<div class="sitetitle">
 			<span>网站名称</span>
-			<input type="text" id="sitename" class="siteinput">
+			<input type="text" id="sitename" class="siteinput" placeholder="例如：只读">
 		</div>
 
 		<div class="siteurl">
 			<span>网站地址</span>
-			<input type="text" id="siteurl" class="siteinput">
+			<input type="text" id="siteurl" class="siteinput" placeholder="例如：https://www.rdonly.com">
 		</div>
 
 		<div class="sitetype">
 			<span>网站分类</span>
-			<input type="text" list="typelist" placeholder="请选择" class="siteinput" id="sitetype">
-                <datalist id="typelist">
-                　　<option value="常用"></option>
-                </datalist>
+			<input type="text" list="typelist" class="siteinput" id="sitetype" placeholder="例如：自定义-常用">
 		</div>
 		<div class="siteoption">
 			<input type="button" class="optionbutton" value="确定" onclick="Confirm();">
@@ -197,7 +196,9 @@
     
 </body>
 
-<script>
+<script type="text/javascript" src="js/function.js"></script>
+
+<script type="text/javascript">
 	$(".switch").click(function(e){
 		console.log(this);
 		var data={"defaulttype":this.value,"canuse":this.checked};
@@ -207,10 +208,28 @@
 		}
 	});
 
+	$(".spandel").click(function(e){
+		console.log(this);
+		var flag=IsSupportIndexeddb();
+		if(flag){
+			Delete(TBSITES);
+		}
+	});
+
 	//显示添加界面
 	function AddSite(){
 		$(".AddSites").css("display","flex");
 		$(".AddForm").css("display","flex");
+	}
+
+	//显示删除按钮
+	function DelSite(){
+		var disval=$(".icon").css("display");
+		if(disval=="none"){
+			$(".icon").css("display","block");
+		}else{
+			$(".icon").css("display","none");
+		}
 	}
 
 	//关闭添加界面
@@ -227,209 +246,22 @@
 		var sitetype=$("#sitetype").val();
 		var data={"type":sitetype,"name":sitename,"url":siteurl};
 		if(flag){
-			Add(TBSITES,DBNAME,VERSION,data);
+			Add(TBSITES,data);
 		}
 	}
 
-	//判断浏览器是否可用indexeddb数据库
-	function IsSupportIndexeddb(){
-		window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-		
-		window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-		window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
-		
-		if (!window.indexedDB) {
-			window.alert("您的浏览器不支持indexeddb数据库，无法使用此功能，请使用最新版谷歌，edge，火狐浏览器！")
-			return false;
-		}else{
-			return true;
-		}
+	//删除网站
+	function spanclick(e){
+		// console.log($(e).attr("data"));
+		var id=$(e).attr("data");
+		Delete(TBSITES,id);
 	}
-
-	var DBNAME="NAVDATABASE";
-	var VERSION=1;
-	var TBTYPE="SITESTYPESDEFAULT";
-	var TBSITES="SITES"
-	var db;
-	var IndexDefaultType="defaulttype";
-	var IndexType="type";
-
-	//创建一个数据库，版本号为1，表
-	function CreateDatabase(){
-		var request = indexedDB.open(DBNAME,VERSION);
-		
-		request.onerror = function(event) {
-			console.log("打开失败");
-		};
-         
-		request.onupgradeneeded = function(event) {
-			db = event.target.result;
-			if (!db.objectStoreNames.contains(TBSITES)){
-				var objstore=db.createObjectStore(TBSITES, { keyPath:'id',autoIncrement:true });
-				objstore.createIndex('type', 'type', { unique: false });
-			}
-			if (!db.objectStoreNames.contains(TBTYPE)){
-				var objstore=db.createObjectStore(TBTYPE, {keyPath:'id',autoIncrement:true });
-				objstore.createIndex('defaulttype', 'defaulttype', { unique: false });
-			}
-		}
-
-		request.onsuccess = function(event) {
-			db = event.target.result;
-            console.log("打开成功");
-         };
-	}
-
-	//添加内容
-	function AddData(obj,data,index,indexvalue){
-		if(db){
-			var transaction = db.transaction([obj], 'readonly');
-			var store = transaction.objectStore(obj);
-			var index = store.index(index);
-			var request = index.get(indexvalue);
-
-			request.onsuccess = function (e) {
-				var result = e.target.result;
-				if (result) {
-					switch(obj){
-						case TBTYPE:
-							result.canuse=data.canuse;
-							break;
-					}
-					Update(obj,result);
-				} else {
-					Add(obj,data);
-				}
-			}
-		}
-	};
-
-	//添加数据
-	function Add(obj,data){
-		if(db){
-			var res = db.transaction([obj],'readwrite').objectStore(obj).add(data);
-			res.onsuccess = function (event) {
-				console.log('数据写入成功');
-			};
-			res.onerror = function (event) {
-				console.log('数据写入失败');
-			}
-		}
-	}
-
-	//更新数据
-	function Update(obj,data){
-		if(db){
-			var res = db.transaction([obj], 'readwrite').objectStore(obj).put(data);
-			res.onsuccess = function (e) {
-				console.log('数据更新成功');
-			}
-
-			res.onerror = function (event) {
-				console.log('数据更新失败');
-			}
-		}
-	}
-
-
-	//读取数据
-	function Read(obj,index,indexvalue){
-		CreateDatabase();
-		if(db){
-			var transaction = db.transaction([obj], 'readonly');
-			var store = transaction.objectStore(obj);
-			var index = store.index(index);
-			var request = index.get(indexvalue);
-
-			request.onsuccess = function (e) {
-				var result = e.target.result;
-				if (result) {
-					console.log(result);
-				} else {
-					// ...
-				}
-			}
-		}
-	};
-
-	function readAll() {
-		CreateDatabase();
-		if(db){
-			var arr=new Array();
-			var request = indexedDB.open(DBNAME,VERSION);
-			request.onsuccess = function(event) {
-				db = event.target.result;
-				var tran=db.transaction(TBSITES);
-				var objectStore =tran.objectStore(TBSITES);
-				objectStore.openCursor().onsuccess = function (event) {
-					var cursor = event.target.result;
-					if (cursor) {
-						arr.push(cursor.value);
-						cursor.continue();
-					} else {
-						console.log('没有更多数据了！');
-					}
-				};
-				tran.oncomplete=function(event){
-					var data=HandleData(arr);
-					ShowData(data);
-				}
-			}
-		}
-	};
 
 	function LoadData(){
-		readAll();
+		readAll(TBSITES,"set");
+		// readAll(TBTYPE);
 	};
 	LoadData();
-
-	//数据按照type分类
-	function HandleData(arr){
-		var nlist = [];
-		for (var i = 0; i < arr.length; i++) {
-			console.log(arr[i].str);
-			if (nlist.length == 0) {
-				nlist.push({
-					type: arr[i].type,
-					data: [arr[i]]
-				})
-			} else {
-				var index = nlist.findIndex(item => item.type == arr[i].type);
-				if (index >= 0) {
-					nlist[index].data.push(arr[i])
-				} else {
-					nlist.push({
-						type: arr[i].type,
-						data: [arr[i]]
-					})
-				}
-			}
-		}
-		return nlist;
-	}
-
-	function ShowData(data){
-		for(var i=0;i<data.length;i++){
-			console.log(data);
-			var innercontent='<div class="tags" onclick="ChangeStatus"><span class="titlesign"></span><h3>'+data[i].type+'</h3></div><div class="sitediv"><ul id="'+i+'" class="sitesul"></ul></div>';
-			$("#content").append(innercontent);
-			
-			var resourcename='#'+i;
-			var fatherdom=$(resourcename);
-			for(var j=0;j<data[i].data.length;j++){
-				var x=Math.floor(Math.random()*100+1);
-				var y=Math.floor(Math.random()*100+1);
-				var z=Math.floor(Math.random()*100+1);
-
-				var firstname=data[i].data[j].name.substring(0,1);
-				var childdom='<li class="sitesli"><i class="siteicon" style="background-color:#'+x+y+z+'">'+firstname+'</i><a class="sitetext" href="'+data[i].data[j].url+'">'+data[i].data[j].name+'</a></li>';
-				fatherdom.append(childdom);
-			}
-			
-			fatherdom.append("<li style='clear:both;'></li>");
-			
-		}
-	}
 
 </script>
 </html>

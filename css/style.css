@@ -14,6 +14,15 @@ body{
     min-height: 100vh;
     background-size: cover;
 }
+.icon {
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    display: none;
+ }
 ul{
     list-style: none;
 }
@@ -45,7 +54,7 @@ i{
 	width:70vw;
 	max-width: 1024px;
 	margin:auto;
-	padding-bottom:5px;
+	/* padding-bottom:5px; */
 	background-color:#ffffff;
 }
 /*网页头部*/
